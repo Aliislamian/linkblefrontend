@@ -1,0 +1,82 @@
+.postedRequest_sub_title {
+  font-size: 0.9rem;
+}
+
+.become-seller-step-four-add-file-container {
+  border-radius: 10px;
+  border: 4px solid rgb(0, 150, 107, 0.2);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  min-height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-items: center;
+}
+
+.become-seller-add-file-icon-container img {
+  width: 70px;
+  height: 60px;
+  object-fit: contain;
+  /* margin-top: 10px; */
+}
+.become-seller-add-file-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  border-radius: 10px;
+
+  width: 14rem;
+  height: 8rem;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background-color: var(--main-color);
+  border: 2px dashed white;
+  cursor: pointer;
+  color: white;
+
+}
+.become-seller-add-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.become-seller-add-img-container {
+  border-radius: 10px;
+  width: 14rem;
+  height: 9rem;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.become-seller-add-file-cross {
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+.become-seller-add-file {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.become-seller-add-file-container {
+  width: 10rem;
+  height: 9rem;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.become-seller-add-file-icon-text {
+  opacity: 0.9;
+  font-weight: lighter;
+  margin-top: 5px;
+}
+.become-seller-add-file-icon-sub-text {
+  font-size: 0.8rem;
+}

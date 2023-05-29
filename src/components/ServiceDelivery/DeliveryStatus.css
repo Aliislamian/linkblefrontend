@@ -1,0 +1,51 @@
+.delivery-status-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  font-size: var(--drop-down-heading-size);
+}
+
+.delivery-status-accept-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  border-radius: 30px;
+  height: 55px;
+  cursor: pointer;
+}
+.delivery-status-request-revison-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  background-color: var(--light-background-color);
+  color: var(--text-color);
+  border-radius: 30px;
+  height: 55px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .delivery-status-container {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* font-size: var(--drop-down-heading-size); */
+  }
+  .delivery-status-accept-btn {
+    width: 100%;
+    height: 50px;
+    font-weight: 400;
+  }
+  .delivery-status-request-revison-btn {
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 30px;
+    height: 50px;
+    font-weight: 400;
+  }
+}

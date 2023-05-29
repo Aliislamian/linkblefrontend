@@ -1,0 +1,48 @@
+/* .buyer-review-container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: var(--buyer-page-margin-right);
+    margin-left: var(--buyer-page-margin-left);
+    margin-top: 10px;
+  }
+  
+  .buyer-review-about {
+    width: 30%;
+  }
+  .buyer-review-right-section {
+    width: 70%;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .review-options-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .review-service-option-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+  }
+  .review-review-option-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+  }
+  
+  .review-option-border {
+    width: 100%;
+    height: 10px;
+    border-radius: 30px;
+    background-color: var(--light-background-color);
+  }
+  
+  .review-option-text {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+   */

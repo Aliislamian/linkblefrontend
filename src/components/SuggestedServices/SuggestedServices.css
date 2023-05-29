@@ -1,0 +1,35 @@
+/* .main_suggested_card{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+.sub_main_suggested_card{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.services_text{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-left: 1rem;
+}
+.view__all{
+    color: #00966B;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.view__all:hover{
+    color: lightgreen;
+} */
+/* .suggested_card_div{
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1.6rem;
+    flex-wrap: wrap; */
+    /* overflow-x: auto;
+    overflow-y: hidden; */
+/* } */
+/* .professional_card::-webkit-scrollbar{
+    width: 0;
+} */

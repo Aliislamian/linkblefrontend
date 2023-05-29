@@ -1,0 +1,256 @@
+.proposal-main-container {
+  margin-left: 6vw;
+  margin-right: 6vw;
+  margin-top: 20px;
+}
+.proposal-top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.proposal-top-text {
+  color: var(--light-text-color);
+  width: 50%;
+  font-size: var(--text-size);
+}
+
+.proposal-top-btn-div {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+}
+.proposal-delete-btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-background-color);
+  border-radius: 20px;
+  width: 230px;
+  height: 40px;
+}
+.proposal-post-request-btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin-left: 10px;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 20px;
+  width: 230px;
+  height: 40px;
+}
+.proposal-delete-icon img {
+  width: 16px;
+  height: 20px;
+}
+.proposal-plus-icon img {
+  width: 20px;
+  height: 20px;
+}
+.proposal-delete-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.proposal-plus-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.proposal-delete-text {
+  font-size: var(--medium-text-size);
+  margin-left: 10px;
+}
+.proposal-post-request-text {
+  font-size: var(--medium-text-size);
+  margin-left: 10px;
+  font-weight: 600;
+}
+.proposal-talent-profile-main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.proposal-talent-profile-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 30px;
+  height: 30px; */
+}
+.proposal-talent-profile-div img {
+  width: 45px;
+  height: 45px;
+}
+.profile-talent-heading {
+  text-align: center;
+}
+
+@media only screen and (max-width: 1050px) {
+  .proposal-top-btn-div {
+    width: 70%;
+  }
+  .proposal-top-text {
+    width: 30%;
+  }
+  .proposal-main-container {
+    margin-right: 3vw;
+  }
+  .proposal-talent-profile-div img {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .proposal-delete-text {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .proposal-post-request-text {
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 600;
+  }
+  .proposal-delete-btn-div {
+    width: 180px;
+    height: 30px;
+  }
+  .proposal-post-request-btn-div {
+    width: 180px;
+    height: 30px;
+  }
+  .proposal-delete-icon img {
+    width: 13px;
+    height: 17px;
+  }
+  .proposal-plus-icon img {
+    width: 17px;
+    height: 17px;
+  }
+  .proposal-top-text {
+    font-size: 14px;
+  }
+  .proposal-delete-text {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  .proposal-post-request-text {
+    margin-left: 5px;
+  }
+  .proposal-talent-profile-div img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .proposal-main-container {
+    margin-left: 0;
+    margin-right: 0;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .proposal-delete-text {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  .proposal-delete-icon img {
+    width: 11px;
+    height: 15px;
+  }
+  .proposal-plus-icon img {
+    width: 15px;
+    height: 15px;
+  }
+  .proposal-post-request-text {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  .proposal-delete-btn-div {
+    width: 150px;
+    height: 27px;
+  }
+  .proposal-post-request-btn-div {
+    width: 150px;
+    height: 25px;
+  }
+  .proposal-top-text {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .proposal-main-container {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .proposal-delete-text {
+    font-size: 8px;
+    margin-left: 2px;
+  }
+  .proposal-delete-icon img {
+    width: 9px;
+    height: 12px;
+  }
+  .proposal-plus-icon img {
+    width: 11px;
+    height: 11px;
+  }
+  .proposal-post-request-text {
+    font-size: 8px;
+    margin-left: 2px;
+  }
+  .proposal-delete-btn-div {
+    width: 150px;
+    height: 27px;
+  }
+  .proposal-post-request-btn-div {
+    width: 150px;
+    height: 25px;
+  }
+  .proposal-top-text {
+    font-size: 10px;
+  }
+}
+
+.buyer-request-file-img {
+  width: 25px;
+  height: 30px;
+
+  margin-right: 10px;
+}
+
+.buyer-request-file-container {
+  margin-top: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.buyer-request-search-container {
+  /* width: 500px; */
+  /* width: 100%; */
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 510px) {
+  .proposal-top-container {
+    justify-content: center;
+  }
+  .proposal-top-btn-div {
+    width: auto;
+  }
+}

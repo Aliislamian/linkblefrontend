@@ -1,0 +1,254 @@
+.account-security-container {
+  padding-right: 9vw;
+  padding-left: 9vw;
+  padding-top: 20px;
+}
+
+.account-security-top-container {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  align-items: center;
+}
+.account-security-back-btn-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.account-security-back-btn-container img {
+  margin-right: 10px;
+  width: 30px;
+  height: 20px;
+  transform: rotate(-90deg);
+}
+.account-security-back-btn-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.account-security-right-text {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.account-security-bottom-container {
+  width: 100%;
+  min-height: 500px;
+  height: auto;
+  background-color: var(--secondary-background-color);
+  margin-top: 10px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 10px; */
+  padding: 30px;
+}
+
+.account-security-subject-input::placeholder {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.ccount-security-detail-input::placeholder {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.account-security-bottom-left-container label {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.account-security-subject-input {
+  border: 2px solid var(--light-background-color);
+  border-radius: 20px;
+  outline: none;
+  padding: 20px;
+  padding-left: 40px;
+  width: calc(100% - 20px);
+  background-color: var(--secondary-background-color);
+}
+.account-security-detail-input {
+  border: 2px solid var(--light-background-color);
+  border-radius: 20px;
+  outline: none;
+  padding: 20px;
+  padding-left: 40px;
+  width: calc(100% - 20px);
+  background-color: var(--secondary-background-color);
+  resize: none;
+}
+.account-security-bottom-left-container {
+  width: 50%;
+}
+.account-security-bottom-right-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.account-security-img {
+  margin-top: 10px;
+  width: 300px;
+  height: 300px;
+}
+.account-security-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.account-security-btn {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
+  /* left: 0;
+  right: 0; */
+  align-items: center;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+  .account-security-btn {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .account-security-bottom-right-container {
+    /* width: 50%; */
+    /* display: flex; */
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 850px) {
+  .account-security-btn {
+    width: 100%;
+  }
+  .account-security-bottom-right-container {
+    width: 55%;
+  }
+  .account-security-bottom-left-container {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .account-security-img img {
+    display: none;
+  }
+  .account-security-bottom-right-container {
+    display: none;
+  }
+  .account-security-container {
+    padding-right: 9vw;
+    padding-left: 6vw;
+  }
+  .account-security-bottom-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* padding: 10px; */
+    padding: 0;
+    padding-top: 30px;
+  }
+  .account-security-bottom-left-container {
+    width: 100%;
+  }
+  .account-security-subject-input {
+    border-radius: 20px;
+    outline: none;
+    padding: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    width: calc(90% - 40px);
+  }
+  .account-security-detail-input {
+    border-radius: 20px;
+    outline: none;
+    padding: 20px 0px 20px 40px;
+    width: calc(90% - 40px);
+  }
+  .account-security-bottom-left-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .order-requirement-add-file-btn-parent-container {
+    justify-content: center;
+  }
+  .account-security-btn {
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .account-security-top-container {
+    width: 75%;
+  }
+  .account-security-container {
+    padding-right: 0vw;
+    padding-left: 0vw;
+    width: 90vw;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .account-security-top-container {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .account-security-back-btn-container {
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .account-security-btn {
+    width: 70%;
+  }
+  .account-security-right-text {
+    font-size: 1.5rem;
+  }
+  .account-security-back-btn-container img {
+    margin-right: 5px;
+    width: 25px;
+    height: 15px;
+  }
+  .account-security-subject-input {
+    border-radius: 20px;
+    outline: none;
+    padding: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    width: calc(90% - 10px);
+  }
+  .account-security-detail-input {
+    border-radius: 20px;
+    outline: none;
+    padding: 20px 0px 20px 10px;
+    width: calc(90% - 10px);
+  }
+  .account-security-subject-input::placeholder {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .order-requirement-add-file-btn-container {
+    margin-right: 0;
+  }
+  .order-requirement-added-file-cotainer {
+    margin-right: 0;
+  }
+  .account-security-btn {
+    width: 70%;
+  }
+  .account-security-right-text {
+    font-size: 1.2rem;
+  }
+  .account-security-back-btn-text {
+    font-size: 1.2rem;
+  }
+  .account-security-subject-input::placeholder {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,51 @@
+.buyer-profile-all-categories-btn-container {
+  background-color: var(--main-color-with-less-opacity);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--text-color);
+  height: 30px;
+  width: 10rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.buyer-profile-all-categories-btn-icon img {
+  transform: rotate(180deg);
+  width: 10px;
+  height: 11px;
+  object-fit: contain;
+}
+
+.all-category-list {
+  width: 10rem;
+  background-color: var(--third-background-color);
+  border-radius: 10px;
+  position: absolute;
+  bottom: -140px;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+}
+
+.category-list-items {
+  font-size: 1rem;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 5px;
+  opacity: 0.8;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.category-list-items:last-child {
+  margin-bottom: 10px;
+}
+.category-list-items:hover {
+  background-color: white;
+}
+
+.all-category-btn-container {
+  position: relative;
+  /*  */
+}

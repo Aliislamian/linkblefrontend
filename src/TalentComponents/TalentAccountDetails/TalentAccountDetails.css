@@ -1,0 +1,59 @@
+.talent-account-form-main-container {
+  width: 100%;
+}
+.talent-account-form-heading {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.talent-account-form-container {
+  width: 100%;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+  min-height: 27rem;
+}
+
+.account-details-form-container {
+  padding-top: 30px;
+  padding-left: 80px;
+}
+.account-details-form-inner-container {
+  width: 80%;
+}
+
+.talent-account-details-input {
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  margin-top: 5px;
+  width: calc(100% - 20px);
+  padding-left: 20px;
+  height: 35px;
+  outline: none;
+  caret-color: var(--main-color);
+}
+.talent-account-details-bottom-text {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.talent-account-details-save-btn {
+  width: 120px;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .account-details-form-container {
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .talent-account-details-input {
+    width: calc(100% - 5px);
+    padding-left: 5px;
+    text-overflow: ellipsis;
+  }
+  .talent-account-details-input::placeholder {
+    font-size: 0.65rem !important;
+
+  }
+}

@@ -1,0 +1,116 @@
+.input_placeholder::-webkit-input-placeholder {
+  color: "color";
+}
+
+.linked-job-first-input {
+  /* margin-left: 10px !important; */
+  padding-left: 20px !important;
+  width: calc(100% - 20px) !important;
+}
+.linked-job-second-input {
+  /* margin-left: 10px !important; */
+  padding: 1rem 0rem !important;
+  padding-left: 20px !important;
+  width: calc(100% - 20px) !important;
+}
+
+.post-job-main-dialoge .MuiDialog-paperScrollPaper {
+  min-width: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .job-popup-cross-icon img {
+    width: 20px !important;
+  }
+  .post-job-main-dialoge .MuiDialog-paperScrollPaper {
+    min-width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .post-job-main-dialoge .MuiDialog-paperScrollPaper {
+    min-width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .link-job-btn {
+    margin-bottom: 1rem !important;
+    text-align: center;
+    width: 50% !important;
+  }
+  .link-job-btn-div {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .link-job-cancel-btn {
+    margin-left: 0rem !important;
+    text-align: center;
+    width: 50% !important;
+    padding: 10px 35px !important;
+  }
+  .MuiDialog-paper {
+    margin: 0 !important;
+  }
+  .MuiDialog-paperWidthSm {
+    max-width: 90vw !important;
+  }
+  .link-job-btn-div {
+    flex-direction: column !important;
+  }
+
+  .job-popup-cross-icon {
+    padding-top: 15px !important;
+  }
+  .MuiDialogTitle-root {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  .MuiDialogContent-root {
+    padding: 8px 5px !important;
+    font-size: 1rem !important;
+  }
+  .job-pop-up-heading {
+    font-size: 1rem !important;
+  }
+  .linked-job-first-input-label {
+    align-items: center;
+    font-size: 1rem !important;
+    display: flex;
+    justify-content: center;
+  }
+  .linked-job-second-input-label {
+    align-items: center;
+    font-size: 1rem !important;
+    display: flex;
+    justify-content: center;
+  }
+  .MuiDialogContent-root input {
+    text-align: center !important;
+    min-height: 5vh !important;
+  }
+  .linked-job-first-input {
+    width: 100% !important;
+    padding-left: 0px !important;
+  }
+  .linked-job-second-input {
+    width: 100% !important;
+    /* padding-left: 0px !important; */
+    /* padding  */
+    padding: 1rem 0rem !important;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .MuiTypography-h6 {
+    font-size: 1rem !important;
+    align-items: center;
+  }
+  .job-popup-cross-icon {
+    padding-top: 15px !important;
+    padding-right: 20px !important;
+  }
+  .job-popup-cross-icon img {
+    width: 18px !important;
+  }
+}

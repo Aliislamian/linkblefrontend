@@ -1,0 +1,30 @@
+/* .delivery-status-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  font-size: var(--drop-down-heading-size);
+}
+
+.delivery-status-accept-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  border-radius: 30px;
+  height: 55px;
+  cursor: pointer;
+}
+.delivery-status-request-revison-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  background-color: var(--light-background-color);
+  color: var(--text-color);
+  border-radius: 30px;
+  height: 55px;
+  cursor: pointer;
+} */

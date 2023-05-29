@@ -1,0 +1,129 @@
+.main_ultimate_services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 4rem;
+  margin-left: 6vw;
+  padding-left: 5vw;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  margin-right: 6.4vw;
+  height: 450px;
+  /* overflow-y: auto; */
+}
+.ultimateTextMain {
+  width: 80%;
+}
+.ultimate_text {
+  margin-top: 50px;
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  max-width: max-content;
+  /* word-wrap: break-word;
+  word-break: break-word; */
+  /* overflow: hidden; */
+}
+.button_div {
+  height: 3.5rem;
+  width: 9.5rem;
+  /* margin-left: 4rem; */
+  border-radius: 8px;
+  margin-top: 2rem;
+  font-weight: 500;
+  color: white;
+  text-transform: capitalize;
+  font-size: var(--text-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00966b;
+}
+.image_ultimate_design {
+  display: flex;
+  justify-content: center;
+  /* background-color: coral; */
+  width: 50%;
+}
+.ultimate_image_css {
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
+}
+.cardMedia {
+  width: fit-content;
+  height: 90%;
+  /* background-color: coral; */
+}
+
+@media only screen and (max-width: 1410px) {
+  .main_ultimate_services {
+    margin-right: 6.4vw;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .ultimate_text {
+    font-size: var(--large-size);
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .ultimate_text {
+    font-size: var(--large-size);
+  }
+  .ultimateTextMain {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ultimate_text {
+    font-size: 2rem;
+  }
+  /* .cardMedia{
+        width: 200px;
+    } */
+}
+@media only screen and (max-width: 600px) {
+  .ultimate_text {
+    font-size: var(--small-size);
+    margin-top: 0;
+  }
+  .ultimateTextMain {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .main_ultimate_services {
+    padding-left: 0vw;
+    height: 350px;
+  }
+  .image_ultimate_design {
+    display: none;
+  }
+  .ultimate_image_css {
+    display: none;
+  }
+  .ultimateTextMain {
+    width: 100%;
+    display: flex;
+      justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  .button_div {
+    border-radius: 8px;
+    margin-top: 2rem;
+    font-weight: 500;
+    color: white;
+    text-transform: capitalize;
+    font-size: var(--text-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #00966b;
+  }
+}

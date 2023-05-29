@@ -1,0 +1,412 @@
+.talent-about-card-container {
+  display: flex;
+  justify-content: center;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  max-width: 25vw;
+  --normal-text-size: 0.9rem;
+  --small-text-size: 0.7rem;
+  font-size: var(--normal-text-size);
+}
+.talent-about-card-inner-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+}
+
+.talent-about-card-img {
+  width: 80px;
+  height: 80px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.talent-about-card-name-and-level-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+.talent-about-card-name {
+  margin-right: 10px;
+}
+
+.talent-about-card-level {
+  margin-right: 20px;
+  font-size: var(--small-text-size);
+}
+
+.talent-about-card-description {
+  display: flex;
+  text-align: center;
+  font-size: var(--small-text-size);
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.talent-about-card-address-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.talent-about-card-address-icon {
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.talent-about-card-address {
+  font-size: var(--small-text-size);
+}
+.talent-about-card-btn {
+  background-color: var(--main-color);
+  padding: 12px;
+  color: var(--text-color);
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.talent-about-card-detail-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: var(--normal-text-size);
+}
+.talent-about-card-detail-language-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  margin-bottom: 40px;
+  font-size: var(--normal-text-size);
+}
+.talent-about-card-detail-icon-and-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.talent-about-card-detail-icon-and-heading img {
+  width: 18px;
+  height: 18px;
+  margin-right: 20px;
+}
+
+.talent-about-card-languages-parent-div {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 38px);
+  margin-left: 38px;
+  align-items: center;
+}
+.talent-about-card-languages-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.talent-about-card-languages-div img {
+  margin-right: 10px;
+  width: 8px;
+  height: 8px;
+}
+.talent-about-card-languages-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.talent-about-card-languages-parent-div .talent-about-card-languages-div {
+  margin-top: 10px;
+}
+
+.talent-about-card-heading {
+  display: flex;
+  justify-items: flex-start;
+  width: 100%;
+  font-size: var(--normal-text-size);
+  margin-bottom: 10px;
+}
+.talent-about-card-about-me-text {
+  margin-left: 38px;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.talent-about-card-servies-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.talent-about-card-service-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 33.33%;
+  font-size: var(--small-text-size);
+}
+.talent-about-card-service-div img {
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+}
+
+.talent-about-card-education-conatiner {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.talent-about-card-education {
+  margin-left: 38px;
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+  width: 70%;
+  flex-direction: column;
+}
+
+.talent-progress-data {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.talent_avg_response_rate_div {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  background-color: #f6f6f6;
+  width: 90%;
+  border-radius: 10px;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.talent_circular_progress_bar_div {
+  height: 40px;
+  width: 40px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.talent-level-bar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.talent-level-bar-inner-container {
+  width: 100%;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  align-items: center;
+  background-color: var(--third-background-color);
+}
+.talent-level-star-container {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: var(--light-background-color);
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+.talent-level-star {
+  font-size: 20px !important;
+  color: #fdfd3b !important;
+}
+
+.talent-level-prgress-bar-number-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+}
+.talent-level-prgress-bar-number-container {
+  margin-right: 8px;
+  font-size: 0.7rem;
+}
+
+.talent-level-prgress-bar-number-container img {
+  width: 15px;
+  object-fit: contain;
+  height: 15px;
+}
+
+.talent-level-progress-bar img {
+  width: 150px;
+}
+
+.talent-completed-order-drop-down {
+  width: 100%;
+  background-color: #003123;
+  color: var(--text-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  margin-bottom: 2.2rem;
+  font-size: 1.2rem;
+}
+.talent-completed-order-drop-down-left {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.talent-completed-order-drop-down-right {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.talent-completed-order-drop-down-right-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transform: rotate(180deg);
+  margin-right: 10px;
+  margin-top: 3px;
+}
+.talent-completed-order-drop-down-right-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-background-color);
+  border-radius: 30px;
+  height: 40px;
+}
+
+.talent-completed-order-drop-down-right-btn-text {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.talent-about-card-detail-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media only screen and (max-width: 1200px) {
+  .talent-about-carousel-top-text-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .talent-about-me-card-container {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .talent-about-carousel {
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 3vw;
+  }
+  .talent-about-card-container {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .talent-about-carousel-top-text-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .talent-about-me-card-container {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .talent-about-card-container {
+    max-width: 100%;
+  }
+
+  .talent-about-carousel {
+    width: 35%;
+  }
+  .talent-about-price-container {
+    width: 340px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .talent-about-inner-container {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .talent-about-carousel {
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0vw;
+  }
+  .talent-about-me-card-container {
+    width: 80vw;
+    margin-bottom: 50px;
+  }
+  .talent-about-carousel {
+    width: 80vw;
+    margin-bottom: 50px;
+    align-items: flex-start;
+  }
+  .talent-about-carousel-bottom-text {
+    width: 80vw;
+  }
+  .talent-about-carousel-bottom-heading {
+    margin-top: 30px;
+  }
+  .talent-about-price-container {
+    width: 50vw;
+    margin-bottom: 30px;
+  }
+  .talent-about-carousel-top-text-container {
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talent-about-carousel-top-text-container {
+    flex-direction: column;
+  }
+  .talent-about-price-container {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .talent-about-me-card-container {
+    width: 90vw;
+  }
+  .talent-about-carousel {
+    width: 90vw;
+    margin-bottom: 50px;
+    align-items: flex-start;
+  }
+  .talent-about-price-container {
+    width: 90vw;
+  }
+}

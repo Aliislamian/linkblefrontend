@@ -1,0 +1,69 @@
+.talent-services-img-and-review-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  height: 170px;
+  border-radius: 10px;
+  background-color: var(--gradient-color);
+  position: relative;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.talent-services-gig-img-div {
+  height: 100%;
+  width: 35%;
+}
+.talent-services-gig-img-div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.talent-services-gig-heading {
+  font-size: 12px;
+  margin-top: 10px;
+  /* color: #fff; */
+}
+
+.talent-services-heart-icon {
+  position: absolute !important;
+  width: 30px;
+  right: 15px;
+  top: 15px;
+  height: 30px;
+  background-color: rgb(0, 150, 107, 0.4) !important;
+  /* color: rgb(0, 150, 107, 0.7) !important; */
+}
+
+.talent-services-starting-price-heading {
+  position: absolute;
+  bottom: 10px;
+  left: calc(35% + 10px);
+  font-size: 1rem;
+  color: var(--text-color-light);
+}
+
+@media screen and (max-width: 1100px) {
+  .talent-services-img-and-review-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .talent-services-img-and-review-container {
+    width: 100%;
+    height: 120px;
+  }
+  .talent-services-heart-icon {
+    position: absolute !important;
+    width: 30px;
+    right: 15px;
+    bottom: 15px;
+    top: auto;
+    height: 30px;
+    background-color: rgb(0, 150, 107, 0.4) !important;
+    /* color: rgb(0, 150, 107, 0.7) !important; */
+  }
+}

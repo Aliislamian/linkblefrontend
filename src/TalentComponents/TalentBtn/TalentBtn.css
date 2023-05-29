@@ -1,0 +1,19 @@
+.talent-btn-container {
+  background-color: var(--main-color);
+  border-radius: 50px;
+  color: white;
+  padding: 12px 50px;
+  cursor: pointer;
+  width: max-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .talent-btn-container {
+    padding: 10px 10px;
+    /* font-size: 0.9rem; */
+  }
+}

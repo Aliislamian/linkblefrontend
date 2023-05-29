@@ -1,0 +1,659 @@
+.order_details_main_page_div {
+  display: flex;
+  flex-direction: row;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+/* .order-detail-parent-container{
+    overflow-x: hidden;
+} */
+/* .overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 0;
+} */
+.first_order_details_main {
+  min-width: 25vw;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+  padding-bottom: 2rem;
+}
+.order_page_profile_pic_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+}
+.Circular_profile_img_css {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.profile_name_main_div {
+  display: flex;
+  flex-direction: row;
+  padding-top: 0.7rem;
+  min-width: 50%;
+  /* background-color: coral; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+}
+.profile_name_text_css {
+  font-size: large;
+  font-family: "Roboto";
+  font-weight: bold;
+  margin-right: 0.625vw;
+}
+.profile_level_css {
+  font-size: medium;
+  display: flex;
+  /* align-self: flex-end; */
+  font-weight: 500;
+  margin-right: 0.625vw;
+}
+/* .verified_icon_css {
+  padding-left: 5px;
+} */
+.status_div {
+  padding-top: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+}
+.profiler_location_div {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+}
+.location_icon_css {
+  height: 100%;
+}
+.country_name_css {
+  color: gray;
+  font-weight: 500;
+  padding-left: 1rem;
+}
+.avg_response_rate_div {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  background-color: #f6f6f6;
+  width: 75%;
+  border-radius: 10px;
+  padding: 15px 2vw 15px 2vw;
+  justify-content: space-between;
+  align-items: center;
+}
+.avg_response_rate_text_n_mins_div_main {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.circular_progress_bar_div {
+  height: 50px;
+  width: 50px;
+  font-size: 2rem;
+}
+.second_order_details_main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  padding-left: 1.5rem;
+  width: 70%;
+  margin-bottom: 10px;
+}
+.Top_div_Active_orders_main {
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  /* padding: 10px 25px 10px 25px; */
+  border-radius: 5px;
+}
+.Active_orders_div {
+  font-family: "Segoe UI";
+  display: flex;
+  align-items: center;
+  padding: 0px 20px 0px 20px;
+}
+.chat_n_all_orders_btns_main {
+  display: flex;
+  flex-direction: row;
+  font-family: "Segoe UI";
+  padding: 10px 20px 10px 20px;
+}
+.chat_btn_main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: small;
+  align-items: center;
+  padding: 5px 15px 5px 15px;
+  border: 2px solid #3fad8e;
+  border-radius: 20px;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+.plus_icon_css {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  padding-top: 3px;
+  padding-right: 5px;
+}
+.All_orders_btn_main {
+  padding: 5px 30px 5px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00966b;
+  border-radius: 20px;
+  margin-left: 10px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.all_orders_select_input_field {
+  outline: none;
+  background-color: #00966b;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+.order_card_main {
+  position: relative;
+  background-color: #00966b;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  border-radius: 5px;
+  /* cursor: pointer; */
+  align-items: center;
+}
+.order_image_div_mainn {
+  padding: 10px 20px 10px 20px;
+  height: 10rem;
+  border-radius: 5px;
+}
+.order_image_css {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.second_order_card_div_main {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  padding: 10px 0px 10px 0px;
+  width: 16vw;
+  /* background-color: cadetblue; */
+}
+.profile_mainnn {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1.5rem;
+}
+.order_profile_image_div {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: cadetblue; */
+  object-fit: contain;
+}
+.Order_profile_image_csss {
+  height: 100%;
+  width: 100%;
+}
+.order_name_country_details_div {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+.order_budget_main_div {
+  display: flex;
+  flex-direction: column;
+}
+.third_order_card_div_main {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.5rem;
+  padding: 10px 0px 10px 0px;
+  max-width: 16vw;
+  /* background-color: cadetblue; */
+}
+.status_n_incomplete_main {
+  display: flex;
+  flex-direction: column;
+}
+.status_div_ {
+  color: white;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.InComplete_div_ {
+  border: 1px solid #7dc9b3;
+  width: fit-content;
+  padding: 2px 5px 2px 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: small;
+}
+.Delivery_n_time_divs {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem;
+}
+.delivery_divv_ {
+  color: white;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.clock_icon_n_time {
+  border: 1px solid #7dc9b3;
+  padding: 2px 5px 2px 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.remaining_days_time {
+  padding-left: 10px;
+  text-align: initial;
+}
+
+.check-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.check-box-img {
+  width: 35px;
+  height: 35px;
+}
+.delivery-pending-btn-div {
+  display: flex;
+  justify-content: space-between;
+  /* width: 50px;
+    height: 120px; */
+  align-items: center;
+  background-color: var(--text-color);
+  position: absolute;
+  top: 2vw;
+  right: 1.2vw;
+}
+.delivery-pending-btn-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delivery-pending-btn-text {
+  padding-right: 10px;
+}
+
+@media only screen and (max-width: 1350px) {
+  .delivery-pending-btn-div {
+    top: 1vw;
+    right: 0.2vw;
+    font-size: 12px;
+  }
+  .delivery-pending-btn-text {
+    padding-right: 5px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .order_details_main_page_div {
+    padding-right: 3vw;
+  }
+  .check-box-container {
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  .check-box-img {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .delivery-pending-btn-div {
+    top: 1vw;
+  }
+
+  .order_image_div_mainn {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .order_image_css {
+    height: 90%;
+    width: 90%;
+  }
+  .second_order_card_div_main {
+    margin-left: 0.5rem;
+  }
+  .Order_profile_image_csss {
+    height: 50px;
+    width: 50px;
+  }
+  .order_budget_main_div {
+    font-size: 11px;
+  }
+  .order-card-text {
+    font-size: 11px !important;
+  }
+  .order-card-heading {
+    font-size: 1rem !important;
+  }
+  .third_order_card_div_main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+  }
+  .remaining_days_time {
+    padding-left: 5px;
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .status_div_ {
+    font-size: 11px;
+  }
+  .delivery_divv_ {
+    font-size: 11px;
+  }
+  .InComplete_div_ {
+    margin-top: 4px;
+  }
+
+  .delivery-pending-btn-div {
+    font-size: 9px;
+  }
+
+  .delivery-pending-btn-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .order_details_main_page_div {
+    padding-right: 2vw;
+  }
+  .chat_n_all_orders_btns_main {
+    padding: 10px 5px 10px 5px;
+  }
+  .Active_orders_div {
+    padding: 0px 5px 0px 10px;
+  }
+  .all_orders_select_input_field {
+    font-size: 1rem;
+  }
+  .chat_btn_main {
+    padding: 5px 5px 5px 5px;
+    font-size: 12px;
+  }
+  .All_orders_btn_main {
+    padding: 5px 20px 5px 20px;
+  }
+  .order_name_country_details_div {
+    padding-left: 0.5rem;
+  }
+  .second_order_card_div_main {
+    margin-left: 0rem;
+  }
+  .order_image_css {
+    height: 90%;
+    width: 95%;
+  }
+  .third_order_card_div_main {
+    padding: 10px 0px 25px 12px;
+  }
+  .clock_icon_css {
+    width: 10px;
+    height: 10px;
+  }
+  .clock_icon_n_time {
+    padding: 2px 0px 2px 0px;
+  }
+  .order_image_div_mainn {
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 5px;
+    width: 38%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .order_details_main_page_div {
+    flex-direction: column;
+    padding-left: 0vw;
+    padding-right: 0vw;
+    align-items: center;
+  }
+  .second_order_details_main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    padding-left: 0rem;
+    width: 90vw;
+  }
+  .first_order_details_main {
+    width: 90vw;
+  }
+  .order_card_main {
+    justify-content: space-between;
+  }
+  .order_image_div_mainn {
+    width: 35%;
+  }
+  .second_order_card_div_main {
+    width: 35%;
+  }
+  .third_order_card_div_main {
+    padding: 10px 0px 25px 0px;
+    max-width: 30%;
+    margin-left: 5px;
+    width: 30%;
+    justify-content: flex-end;
+    display: flex;
+  }
+  .clock_icon_n_time {
+    width: 120px;
+  }
+  .order_profile_image_div {
+    justify-content: flex-start;
+  }
+  .delivery-pending-btn-div {
+    top: 0.5vw;
+    height: 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .status_div_ {
+    font-size: 11px;
+  }
+  .delivery_divv_ {
+    font-size: 11px;
+  }
+  .InComplete_div_ {
+    margin-top: 4px;
+  }
+
+  .delivery-pending-btn-div {
+    font-size: 9px;
+  }
+
+  .delivery-pending-btn-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .check-box-container {
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .check-box-img {
+    width: 22px;
+    height: 22px;
+  }
+  .profile_mainnn {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 5px;
+    top: 0;
+    padding-bottom: 1.5rem;
+  }
+  .order_card_main {
+    justify-content: space-between;
+    position: relative;
+  }
+  .order_image_css {
+    object-fit: contain;
+    height: 95%;
+    width: 95%;
+  }
+  .order_image_div_mainn {
+    align-items: flex-end;
+  }
+  .Order_profile_image_csss {
+    height: 40px;
+    width: 40px;
+  }
+  .profile_mainnn {
+    width: 40%;
+  }
+  .order-card-text {
+    font-size: 9px !important;
+    line-height: auto !important;
+  }
+  .order-card-heading {
+    font-size: 11px !important;
+  }
+  .order_name_country_details_div {
+    padding-left: 0px;
+  }
+  .Delivery_n_time_divs {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 0rem;
+  }
+  .third_order_card_div_main {
+    padding: 0px 0px 10px 0px;
+    max-width: 30%;
+    margin-left: 5px;
+    width: 30%;
+    justify-content: flex-end;
+    display: flex;
+    right: 45px;
+    font-size: 1rem;
+    top: 0;
+    position: absolute;
+  }
+  /* .order_budget_main_div {
+    font-size: 11px;
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    left: 150px;
+  } */
+  .order_image_css {
+    object-fit: contain;
+    height: 60%;
+    position: absolute;
+    width: 45%;
+  }
+  .order-detail {
+    line-height: normal !important;
+    margin-bottom: 10px;
+  }
+  .chat_btn_main {
+    padding: 2px 2px 2px 2px;
+    font-size: 8px !important;
+  }
+  .all_orders_select_input_field {
+    font-size: 8px;
+  }
+  .Active_orders_div {
+    padding: 0px 5px 0px 5px;
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .All_orders_btn_main {
+    margin-left: 5px;
+    width: 60px;
+    margin-right: 5px;
+  }
+  .chat_n_all_orders_btns_main {
+    padding: 10px 0px 10px 0px;
+  }
+  .chat_btn_main {
+    padding: 2px 0px 2px 0px;
+    font-size: 7px !important;
+  }
+  .all_orders_select_input_field {
+    font-size: 7px;
+  }
+  .Active_orders_div {
+    padding: 0px 5px 0px 5px;
+    font-size: 10px;
+  }
+  .All_orders_btn_main {
+    margin-left: 5px;
+    padding: 5px 8px 5px 8px;
+  }
+  .td-propsal-budget{
+    margin-right: 5px !important;
+  }
+}

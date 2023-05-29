@@ -1,0 +1,228 @@
+.manage-order-right-main-container {
+  width: 100%;
+  /* position: relative; */
+}
+
+.no-orders-img {
+  margin: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+.no-orders-img h1 {
+  margin-top: 20px;
+  color: var(--text-color-light);
+  font-weight: 600;
+}
+.manage-orders-table th {
+  color: var(--text-color-light) !important;
+  /* padding-bottom: 5px; */
+  white-space: nowrap;
+
+}
+
+.talent-manage-section {
+  /* height: 50vh !important; */
+  height: calc(100vh - 194px);
+  overflow-y: auto;
+}
+
+.talent-manage-section::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.talent-manage-section {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.manage-orders-table {
+  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+}
+
+.manage-card-card-row {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  width: 100%;
+  padding-bottom: 20px;
+  border-radius: 5px;
+}
+
+.manage-order-rating-star {
+  font-size: 20px !important;
+  color: var(--stars-colors);
+  opacity: 0.5;
+}
+
+.manage-order-on-service {
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-radius: 10px;
+  /* background-color: #ff5050; */
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.manage-order-on-service img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.manage-order-card-td {
+  display: flex;
+  justify-content: center;
+  padding-left: 5px;
+}
+
+.manage-order-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.manage-order-profile img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.manage-order-profile-below-text span {
+  font-size: 0.8rem;
+}
+
+.manage-order-delivery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.manage-order-delivery-time-container img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  margin-right: 7px;
+}
+.manage-order-delivery-time-container {
+  display: flex;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  justify-content: space-around;
+  align-items: center;
+  width: 160px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+}
+
+.manage-order-delivery-btn-container img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+.manage-order-delivery-btn-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: black;
+  background-color: white;
+  height: 30px;
+  font-weight: lighter;
+  margin-top: 15px;
+  width: 170px;
+  border-radius: 50px;
+}
+
+.manage-order-account-column-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.manage-order-budget {
+  display: flex;
+  padding: 2px;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  margin-bottom: 43px;
+}
+.manage-order-budget img {
+  width: 11px;
+  object-fit: contain;
+  height: 15px;
+}
+
+.manage-order-completion-status {
+  display: flex;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-weight: lighter;
+}
+.manage-order-revision-status {
+  font-weight: lighter;
+  margin-top: 10px;
+  display: flex;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  border: none;
+  background-color: #ff5050;
+  border-radius: 30px;
+}
+
+.manage-order-rating {
+  display: flex;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  margin-bottom: 42px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .manage-order-on-service {
+    width: 120px;
+    height: 80px;
+    margin-left: 5px;
+  }
+  .manage-order-profile img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-left: 5px;
+  }
+  .manage-order-delivery-time-container {
+    width: 115px;
+    margin-left: 5px;
+  }
+  .manage-order-delivery-btn-container {
+    margin-left: 5px;
+    width: 125px;
+  }
+  .manage-orders-table th {
+    color: var(--text-color-light) !important;
+    /* padding-bottom: 5px; */
+    white-space: nowrap;
+    padding-right: 5px;
+  }
+}

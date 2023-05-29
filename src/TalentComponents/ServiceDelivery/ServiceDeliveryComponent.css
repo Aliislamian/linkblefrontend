@@ -1,0 +1,42 @@
+/* .service-delivery-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 50px;
+}
+.service-delivery-documents-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.service-delivery-content-text {
+  font-size: var(--drop-down-content-medium-size);
+  font-weight: lighter;
+  width: 60%;
+}
+
+.service-delivery-img-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-delivery-img-div img {
+  width: 100px;
+  height: 110px;
+  margin-right: 50px;
+}
+
+.service-delivery-download-icon img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.service-delivery-img-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--main-color);
+} */

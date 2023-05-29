@@ -1,0 +1,47 @@
+.main_sumbmit_card{
+    height: 10rem;
+    width: 20rem;
+    background-color: #F2F2F2;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-left: 2rem; */
+    /* margin-right: 2rem; */
+    border-radius: 10px;
+}
+.above_div{
+    height: 7rem;
+    /* background-color: coral; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: coral; */
+}
+.text_css{
+    width: 8rem;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding-left: 1rem;
+    /* background-color: aqua; */
+}
+.submit_card_image_css{
+    height: 90%;
+    width: 50%;
+    margin-top: 10px;
+}
+.below_div{
+    /* background-color: blueviolet; */
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    height: 40px;
+    width: 12rem;
+    border-radius: 20px;
+    color: #00966B;
+    border: 1px solid #00966B;
+    cursor: pointer;
+}

@@ -1,0 +1,132 @@
+.create-new-service-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--main-color);
+  width: 200px;
+  border-radius: 3px;
+  padding: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.manage-gig-create-service-img1 {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.talent-gig-section-heading {
+  font-size: 1.7rem;
+  padding-bottom: 10px;
+  padding-left: 6rem;
+  font-weight: 500;
+  margin-top: 5px;
+  position: relative;
+}
+.manage-gig-app-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.gig-notifications-toggle-checkbox:checked + .gig-notifications-toggle-switch {
+  background: var(--main-color);
+}
+
+.gig-notifications-toggle-switch {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  width: 30px;
+  height: 18px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+  cursor: pointer;
+}
+.gig-notifications-toggle-switch:before,
+.gig-notifications-toggle-switch:after {
+  content: "";
+}
+.gig-notifications-toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2px;
+  margin: auto;
+  transition: left 0.25s;
+}
+.gig-notifications-toggle:hover .gig-notifications-toggle-switch:before {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.gig-notifications-toggle-checkbox:checked
+  + .gig-notifications-toggle-switch:before {
+  left: 15px;
+}
+
+.gig-notifications-toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.gig-notifications-toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.talent-account-notifications-option-right-content-text {
+  font-size: 1.2rem;
+}
+
+.recieve-custom-offer-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: var(--buyer-page-margin-right);
+}
+
+.recieve-custom-offer-text {
+  margin-right: 20px;
+}
+
+/* .recieve-custom-gig-select {
+  padding-right: 20px;
+} */
+
+@media only screen and (max-width: 768px) {
+  .talent-gig-section-heading {
+    padding-left: 4rem;
+  }
+
+  .manage-gig-app-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .recieve-custom-offer-container {
+    margin-left: 5vw;
+    padding-bottom: 5px;
+  }
+  .create-new-service-main-container {
+    width: 100%;
+  }
+  .create-new-service-container {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .create-new-service-container {
+    font-size: 14px;
+  }
+}

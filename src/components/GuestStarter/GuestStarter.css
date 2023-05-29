@@ -1,0 +1,73 @@
+.main_guest_starter{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+.guest_starter_logo{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    /* background-color: aqua; */
+}
+.guest_starter_logo_image{
+    height: auto;
+}
+.get_started_text{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    font-size: 2rem;
+    /* background-color: brown; */
+}
+.main_two_boxes{
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: blueviolet; */
+    padding-top: 3rem;
+}
+.box_one{
+    height: 25rem;
+    width: 25rem;
+    /* margin-left: 24rem; */
+    background-color: #E4E4E4;
+    border-radius: 18px;
+    cursor: pointer;
+}
+.box_second{
+    height: 25rem;
+    width: 25rem;
+    /* margin-left: 3rem; */
+    background-color: #E4E4E4;
+    border-radius: 18px;
+    cursor: pointer;
+}
+.both_boxes_images_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 3.5rem;
+}
+.first_box_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.second_box_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding-top: 1.8rem;
+}
+
+@media only screen and (max-width: 800px){
+    .box_second{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}

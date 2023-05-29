@@ -1,0 +1,229 @@
+.custom-offer-container {
+  width: 80%;
+  background-color: var(--main-color);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* margin: 50px; */
+  --custom-offer-headings-font-size: 1.2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 20px;
+}
+
+.custom-offer-top-container {
+  width: calc(100% - 10px);
+  background-color: var(--main-color);
+  color: white;
+  font-weight: 700;
+  border-top-left-radius: 10px;
+  height: 50px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.custom-offer-bottom-container {
+  background-color: var(--secondary-background-color);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.custom-offer-services-container {
+  margin-left: 20px;
+  width: 68%;
+}
+
+.custom-offer-details-container:last-child {
+  border: none;
+}
+.custom-offer-details-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--main-color);
+  width: 100%;
+  margin-top: 10px;
+}
+
+.custom-offer-details-left-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.custom-offer-details-left-container img {
+  margin-right: 20px;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.custom-offer-details-text {
+  font-size: var(--custom-offer-headings-font-size);
+  display: flex;
+  align-items: center;
+}
+
+.custom-offer-desc {
+  margin-bottom: 20px;
+}
+
+.custom-offer-details-right-container {
+  min-width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 30px;
+  height: 25px;
+}
+.custom-offer-details-text span {
+  font-weight: lighter;
+  font-size: 0.9rem;
+  margin-left: 3px;
+}
+
+.custom-offer-details-right-text-container {
+  text-align: right;
+  font-size: var(--custom-offer-headings-font-size);
+}
+
+.custom-offer-btn-container {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: var(--custom-offer-headings-font-size);
+}
+
+.custom-offer-btn {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  align-items: center;
+  text-align: center;
+  width: 165px;
+  border-radius: 30px;
+  color: var(--text-color);
+  cursor: pointer;
+  /* margin-bottom: 20px; */
+}
+
+.cutom-offer-exp-time {
+  width: 98%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.8rem;
+  padding-bottom: 10px;
+}
+
+.milstone-payment-btn {
+  background-color: #ff3e3e;
+  color: var(--text-color);
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  width: 25%;
+  position: absolute;
+  right: 5px;
+  min-height: 20px;
+  top: 56px;
+  cursor: pointer;
+}
+
+/*  media query */
+
+@media screen and (max-width: 1300px) {
+  .custom-offer-container {
+    width: 100%;
+    --custom-offer-headings-font-size: 1.2rem;
+  }
+  /* .custom-offer-container {
+    width: 100%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .custom-offer-top-container {
+    width: 100%;
+    border-top-left-radius: 0px;
+  }
+  .custom-offer-bottom-container {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .custom-offer-services-container {
+    width: 100%;
+  }
+  .custom-offer-btn-container {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .custom-offer-btn {
+    width: 100%;
+  } */
+}
+
+@media screen and (max-width: 1000px) {
+  .custom-offer-btn-container {
+    width: 90%;
+  }
+  .custom-offer-btn {
+    padding: 4px;
+    width: 140px;
+    white-space: nowrap;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* .custom-offer-services-container {
+    margin-left: 5px;
+    width: 90%;
+  } */
+  .custom-offer-container {
+    width: 90vw;
+    margin: auto;
+    --custom-offer-headings-font-size: 1rem;
+  }
+  .custom-offer-btn-container {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .custom-offer-container {
+    width: 90vw;
+    margin: auto;
+    --custom-offer-headings-font-size: 0.9rem;
+  }
+  .custom-offer-services-container {
+    margin-left: 5px;
+    width: 90%;
+  }
+  .milstone-payment-btn {
+    width: 140px;
+    left: 5px;
+    bottom: 8px;
+    top: auto;
+  }
+  .custom-offer-btn-container {
+    margin-bottom: 15px;
+  }
+  .custom-offer-details-text span {
+    font-size: 0.8rem;
+  }
+  .custom-offer-details-right-container {
+    min-width: 50px;
+    height: 20px;
+  }
+}

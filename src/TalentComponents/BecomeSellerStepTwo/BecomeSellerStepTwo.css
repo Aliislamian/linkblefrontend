@@ -1,0 +1,235 @@
+.become-seller-step-two-main-container {
+  padding-left: var(--buyer-page-margin-left);
+  padding-right: var(--buyer-page-margin-right);
+}
+
+.seller-step-two-heading {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.table-top-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  background-color: var(--third-background-color);
+  border-radius: 5px;
+}
+
+/* td {
+  border: 1px solid black;
+} */
+
+.table-container td {
+  border: 1px solid black;
+}
+.table-container tr:first-child td {
+  border-top: 0;
+}
+.table-container tr td:first-child {
+  border-left: 0;
+}
+.table-container tr:last-child td {
+  border-bottom: 0;
+}
+.table-container tr td:last-child {
+  border-right: 0;
+}
+
+.table-container tr:first-child th {
+  border-top: 0;
+}
+.table-container tr th:first-child {
+  border-left: 0;
+}
+.table-container tr:last-child th {
+  border-bottom: 0;
+}
+.table-container tr th:last-child {
+  border-right: 0;
+}
+.table-container {
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
+}
+.table-container th {
+  height: 50px;
+  border: 1px solid black;
+}
+.table-container td {
+  height: 60px;
+}
+.table-container .become-seller-first-row:first td {
+  border-bottom: 0px;
+  bottom: none;
+}
+.become-seller-first-row td {
+  height: 90px;
+}
+.become-seller-second-row td {
+  height: 90px;
+}
+.check {
+  border-top: 0px;
+  border: none;
+}
+.check1 {
+  border-bottom: 0px;
+  border: none;
+}
+.table-container tr:first-child td:first-child {
+  bottom: none;
+}
+
+/* .table-container tr:last-child th { */
+/* .become-seller-table-td{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-items: center;
+} */
+
+/* .become-seller-inner-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+} */
+
+.become-seller-inner-div {
+  padding-left: 15px;
+  padding-right: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 40px);
+  border: none;
+  resize: none;
+  outline: none;
+  padding-top: 15px;
+  height: calc(100% - 15px);
+  background-color: var(--third-background-color);
+}
+.become-seller-table-td {
+  position: relative;
+}
+.become-seller-table-td img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.become-seller-table-inner-btn img {
+  width: 12px;
+  height: 12px;
+  margin-top: 3px;
+  object-fit: contain;
+}
+.become-seller-table-inner-btn {
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 8.5rem;
+  text-align: left;
+  border-radius: 3px;
+  padding-left: 10px;
+  height: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: var(--main-color-with-less-opacity);
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  border-right: 16px solid transparent;
+}
+
+.become-seller-table-select-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  cursor: pointer;
+  margin: auto;
+}
+
+.become-seller-table-price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.become-seller-table-price-inner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  width: 5rem;
+  padding-bottom: 3px;
+  margin-right: 5px;
+}
+.become-seller-table-price-container img {
+  width: 15px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.become-seller-step-two-bottom-btn {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.become-seller-table-price-inner-text input {
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: center;
+  background-color: var(--third-background-color);
+}
+
+@media only screen and (max-width: 1200px) {
+  .table-top-container {
+    width: 100%;
+  }
+  .become-seller-step-two-bottom-btn {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .table-top-container {
+    width: 90vw;
+  }
+  .seller-step-two-heading {
+    font-size: 1.2rem;
+    margin-left: 5vw;
+  }
+  .become-seller-step-two-main-container {
+    font-size: 0.9rem;
+  }
+  .become-seller-table-inner-btn {
+    font-size: 0.9rem;
+    width: 6.5rem;
+
+    padding-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .table-top-container {
+    overflow: auto;
+  }
+  .table-container {
+    width: 650px;
+    overflow: auto;
+  }
+}

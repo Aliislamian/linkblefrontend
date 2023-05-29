@@ -1,0 +1,84 @@
+/* PaymentComponent.css */
+.pay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 3rem;
+  }
+  
+  /* CheckoutForm.css */
+  #payment-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #link-authentication-element,
+  #payment-element {
+    margin-bottom: 2rem;
+  }
+  
+  #submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    background-color: #00966b;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #submit:hover {
+    background-color: #007a59;
+  }
+  
+  #submit:disabled {
+    background-color: #b1e1da;
+    cursor: not-allowed;
+  }
+  
+  .spinner {
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #ffffff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  #payment-message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #ff0000;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .pay {
+      padding: 1rem;
+    }
+  
+    #payment-form {
+      padding: 1rem;
+    }
+  }
+  
+  

@@ -1,0 +1,158 @@
+.talent-home-span {
+  --talent-home-heading: 2rem;
+}
+
+.talent-home-top-section,
+.talent-home-bottom-section {
+  margin-left: var(--buyer-page-margin-left);
+  margin-right: var(--buyer-page-margin-right);
+}
+.talent-home-analytics-main-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.talent-home-analytics-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--third-background-color);
+  border-radius: 7px;
+  width: 12rem;
+  min-height: 5rem;
+  padding: 10px;
+}
+
+.talent-home-analytics-heading {
+  margin-top: 30px;
+  font-size: var(--talent-home-heading);
+}
+.talent-home-order-heading {
+  margin-top: 30px;
+  font-size: var(--talent-home-heading);
+}
+
+.talent-home-analytics-price-dot {
+  width: 10px;
+  margin-right: 40px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--light-background-color);
+  margin-top: 2px;
+}
+
+.talent-home-analytics-text {
+  font-size: 1.2rem;
+}
+.talent-home-analytics-price-container {
+  width: 90%;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.talent-home-analytics-price {
+  font-size: var(--talent-home-heading);
+}
+.talent-goal-text {
+  font-size: var(--talent-home-heading);
+  margin-bottom: 20px;
+}
+
+.talent-peformance-level-text {
+  font-size: var(--talent-home-heading);
+}
+.talent-peformance-level {
+  margin-top: 4rem;
+}
+.talent-peformance-level-img {
+  width: 100%;
+}
+.talent-peformance-level-img img {
+  width: 100%;
+  object-fit: contain;
+}
+.talent-home-reviews {
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+}
+/* media query */
+@media only screen and (max-width: 1200px) {
+  .talent-home-top-section,
+  .talent-home-bottom-section {
+    margin-left: var(--buyer-page-margin-left);
+    margin-right: var(--buyer-page-margin-right);
+  }
+}
+@media only screen and (max-width: 950px) {
+  .talent-home-analytics-container {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .talent-next-level-requirement-container {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .talent-home-analytics-main-container {
+    width: 90vw;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .talent-goal-text {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .talent-peformance-level-text {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .talent-home-span .talent-home-analytics-heading {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .talent-home-order-heading {
+    text-align: center;
+  }
+  .talent-peformance-level-img {
+    width: 90vw;
+    margin: auto;
+  }
+  .talent-home-reviews {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .talent-home-analytics-container {
+    width: 90vw;
+    margin-right: 0;
+  }
+
+  .talent-home-span .main_sumbmit_card {
+    width: 90vw;
+  }
+  .talent-home-span {
+    font-size: 0.9rem;
+  }
+  .talent-home-span {
+    --talent-home-heading: 1.5rem;
+  }
+  .talent-peformance-level {
+    margin-top: 3rem;
+  }
+}

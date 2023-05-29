@@ -1,0 +1,173 @@
+.Buyer_footer_main {
+  margin-top: 4rem;
+  background-color: #00966b;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+.Buyer_column_main {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.Buyer_column {
+  display: flex;
+  flex-direction: column;
+}
+.Buyer_columns_tag {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+}
+.Buyer_headings {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.Buyer_column_below_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  flex-direction: column;
+}
+.Buyer_column_below_text {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.Buyer_images_main {
+  padding: 1rem;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: cadetblue; */
+}
+.Buyer_AppGoogleStore {
+  height: 100%;
+  width: 30%;
+}
+.Buyer_social_sites_main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-self: center;
+  padding-top: 1rem;
+  width: 50%;
+}
+.Buyer_icons_css {
+  /* margin-left: rem; */
+  height: 50%;
+}
+.Buyer_top_main {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-self: flex-end;
+  margin-right: 10rem;
+  margin-top: -5rem;
+  justify-content: center;
+  color: #00966b;
+  flex-direction: column;
+  align-items: center;
+}
+.Buyer_top_icon_css {
+  width: 50%;
+}
+.Buyer_last_one_main {
+  margin-left: 4rem;
+  border-top: 0.3px solid lightgray;
+  margin-top: 3rem;
+  margin-right: 3rem;
+  padding-top: 1rem;
+  display: flex;
+  padding-bottom: 1rem;
+  justify-content: space-between;
+}
+.Buyer_linkeble_logo {
+  width: 10rem;
+}
+.Buyer_logo_css {
+  height: 100%;
+  width: 100%;
+}
+.Buyer_center_bottom_text {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+}
+.Buyer_English_USD_main {
+  display: flex;
+  width: 15%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.Buyer_English_Dollar_button_sub_main {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .Buyer_English_Dollar_button_sub_main img {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .Buyer_column_main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Buyer_column {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .Buyer_last_one_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+  }
+  .Buyer_center_bottom_text {
+    margin-bottom: 1rem;
+  }
+  .Buyer_English_USD_main {
+    width: 30%;
+    justify-content: space-around;
+  }
+  .Buyer_top_main {
+    margin-right: 6rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .Buyer_English_USD_main {
+    width: 50%;
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .Buyer_English_USD_main {
+    width: 80%;
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .Buyer_top_main {
+    margin-right: 2rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .Buyer_top_main {
+    display: none;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .Buyer_column_below_text {
+    width: 90%;
+  }
+}

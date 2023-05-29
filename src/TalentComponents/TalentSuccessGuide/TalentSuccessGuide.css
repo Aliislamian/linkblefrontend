@@ -1,0 +1,74 @@
+.talent-success-guide-card {
+  background-color: var(--third-background-color);
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.talent-success-guide-card-right {
+  width: 30%;
+  margin-right: 30px;
+}
+.talent-success-guide-card-left {
+  width: 70%;
+  margin-left: 30px;
+}
+
+.talent-success-guide-card-left-heading {
+  font-size: 2rem;
+  margin-left: 20px;
+}
+
+.talent-success-guide-card-left-text {
+  line-height: 35px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+.talent-success-guide-card-right-img {
+  display: flex;
+  justify-content: flex-end;
+}
+.talent-success-guide-card-right img {
+  width: 70%;
+  object-fit: contain;
+}
+
+/* media query */
+@media only screen and (max-width: 1200px) {
+  .talent-success-guide-card-right img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .talent-success-guide-card-left {
+    width: calc(80% - 20px);
+    margin-left: 20px;
+  }
+  .talent-success-guide-card-right {
+    width: calc(20% - 20px);
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .talent-success-guide-card-right {
+    display: none;
+  }
+  .talent-success-guide-card-left {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .talent-success-guide-card {
+    width: 90vw;
+    font-size: 0.9rem;
+    margin: auto;
+  }
+  .talent-success-guide-card-left-heading {
+    font-size: 1.5rem;
+    margin-left: 0;
+}
+}

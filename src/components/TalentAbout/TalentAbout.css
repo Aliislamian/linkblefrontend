@@ -1,0 +1,171 @@
+.talent-about-container {
+  margin-top: 30px;
+
+  margin-left: var(--buyer-page-margin-left);
+  margin-right: var(--buyer-page-margin-right);
+}
+.talent-about-inner-container {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.talent-about-carousel {
+  width: 43%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 3vw;
+}
+
+.talent-about-carousel-top-text-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.talent-about-carousel-star-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.talent-about-me-card-container {
+  width: 25%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.talent-about-price-container {
+  width: 30%;
+  width: 350px;
+  height: 400px;
+  background-color: var(--main-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.talent-about-price-inner-container {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.talent-about-package-headings-container {
+  display: flex;
+  justify-content: space-between;
+}
+.talent-about-package-heading {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.talent-about-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.talent-about-price-services-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 0.8rem;
+}
+.talent-about-price-btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.talent-about-price-btn {
+  width: 40%;
+  padding: 12px;
+  background-color: var(--secondary-background-color);
+  color: black;
+  border-radius: 5px;
+  font-weight: bolder;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.talent-about-carousel-bottom-text {
+  font-size: 0.8rem;
+  width: 80%;
+}
+
+.talent-about-carousel-bottom-heading {
+  font-size: 1.5rem;
+}
+
+.talent-about-faq-container {
+  display: flex;
+  transition: all 0.5s ease;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  /* margin-bottom: 2px solid var(--border-color); */
+  border-bottom: 2px solid var(--border-color);
+  width: 100%;
+}
+.talent-about-question-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+.talent-about-question {
+  margin-right: 20px;
+}
+
+.talent-about-question-faq-icon {
+  width: 15px;
+  cursor: pointer;
+  height: 9px;
+  transition: all 0.2s ease;
+}
+
+/* .check {
+  display: flex;
+}
+.vl {
+  border-left: 6px solid green;
+  height: auto;
+  margin-bottom: 10px;
+} */
+.talent-about-answer-container-answer::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.talent-about-answer-container-answer {
+  overflow: auto;
+  transition: height 0.2s ease;
+}
+
+.talent-about-rating-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  .talent-about-faq-heading {
+    padding-left: 6vw;
+  }
+  .talent-about-question-container{
+    padding-left: 6vw;
+  }
+  .talent-about-question-faq-icon{
+    margin-right: 15px;
+  }
+}

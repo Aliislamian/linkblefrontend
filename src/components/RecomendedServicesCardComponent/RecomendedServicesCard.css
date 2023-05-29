@@ -1,0 +1,26 @@
+.recomendedServicesCard_main{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+}
+.recomendedServicesCard_sub_main{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-left: 3.5rem;
+}
+.just_right_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    height: 3rem;
+    width: 3rem;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 14rem;
+    margin-right: .6rem;
+    position: absolute;
+    cursor: pointer;
+    box-shadow:  5px 5px 5px #ccc;
+}

@@ -1,0 +1,8 @@
+.card-content{
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+}
+.view-order-text{
+    font-size:3vw;
+}

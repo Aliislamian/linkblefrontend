@@ -1,0 +1,127 @@
+.main_suggested_card {
+  margin-left: 5vw !important;
+  margin-right: 5.8vw !important;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.sub_main_suggested_card {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1vw;
+  flex-direction: column;
+}
+.Sub_title_heading {
+  padding-top: 1rem;
+  /* padding-left: 2rem; */
+}
+.services_text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* padding-left: 1rem; */
+}
+.view__all {
+  color: #86a49c;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.view__all:hover {
+  color: lightgreen;
+}
+.suggested_card_div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1660px) {
+  .suggested_card_div {
+    justify-content: space-between;
+    margin-right: 0.6vw !important;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .main_suggested_card {
+    margin-right: 6vw !important;
+  }
+  .suggested_card_div {
+    margin-right: 1vw !important;
+  }
+}
+@media screen and (max-width: 1410px) {
+  .main_suggested_card {
+    margin-right: 7.8vw !important;
+  }
+  .suggested_card_div {
+    margin-right: 2.8vw !important;
+  }
+  .card:last-child {
+    margin-right: 43.5vw;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .card:last-child {
+    margin-right: inherit;
+  }
+  .suggested_card_div {
+    margin-right: 0vw !important;
+  }
+  .suggested_card_div {
+    margin-right: 0.4vw !important;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .suggested_card_div {
+    margin-right: -0.5vw !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .suggested_card_div {
+    margin-right: 2.5vw !important;
+  }
+  .main_suggested_card {
+    margin-right: 2vw !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .suggested_card_div {
+    margin-right: 0vw !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .suggested_card_div {
+    margin-right: 0vw !important;
+    display: flex;
+    margin-left: 0;
+    justify-content: center;
+  }
+  .main_suggested_card {
+    margin-right: 0vw !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0 !important;
+  }
+  .sub_main_suggested_card {
+    width: 90vw !important;
+  }
+}
+
+@media screen and (min-width: 2150px) {
+  .main_suggested_card {
+    margin-left: 7vw !important;
+    margin-right: 1.1vw !important;
+  }
+  .suggested_card_div {
+    justify-content: stretch;
+  }
+  .non-carousel-cards {
+    margin-right: 6.7vw !important     ;
+  }
+}
+
+/* .non-carousel-cards:nth-child(1){
+    display: none;
+} */

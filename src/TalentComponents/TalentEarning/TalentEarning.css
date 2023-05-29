@@ -1,0 +1,194 @@
+.talent-earnign-main-container {
+  padding-left: var(--buyer-page-margin-left);
+  padding-right: var(--buyer-page-margin-right);
+  --heading-font-size: 2rem;
+}
+
+.talent-earning-overview-hadings-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.talent-earning-overview-left-heading {
+  font-size: var(--heading-font-size);
+  margin-right: 5vw;
+}
+
+.talent-earning-overview-right-heading {
+  font-size: 0.8rem;
+}
+
+.talent-earning-overview-main-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.talent-earning-overview-main-text {
+  display: flex;
+  justify-content: left;
+  width: 70%;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.talent-earning-overview-container {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.talent-earning-graph {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.talent-earning-graph img {
+  width: 70%;
+}
+
+.withdrawing-option-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  /* margin-bottom: 50px; */
+  flex-direction: column;
+  background-color: var(--main-color);
+  text-align: center;
+}
+
+.withdrawing-option-container-text {
+  color: #fff;
+  font-size: var(--heading-font-size);
+  margin-top: 20px;
+}
+
+.withdrawing-option-inner-container {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.withdrawing-single-option-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.withdrawing-ingle-option-container-img {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.withdrawing-paypal-option-container-img img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+.withdrawing-ingle-option-container-img img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.withdrawing-paypal-container-text {
+  color: #fff;
+  font-size: var(--heading-font-size);
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 1050px) {
+  .withdrawing-option-inner-container {
+    width: 70%;
+  }
+  .talent-earning-overview-container {
+    width: 90%;
+  }
+  .talent-earning-overview-main-text {
+    width: 90%;
+  }
+  .talent-earning-graph img {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .talent-earning-overview-container {
+    width: 100%;
+  }
+  .talent-earning-overview-main-text {
+    width: 100%;
+  }
+  .talent-earning-graph img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .talent-earning-overview-container {
+    justify-content: center;
+  }
+  .talent-earning-graph img {
+    width: 90vw;
+  }
+  .talent-earning-overview-main-text {
+    width: 90vw;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .withdrawing-option-inner-container {
+    width: 85%;
+  }
+  .talent-earning-overview-container {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .talent-earning-overview-main-text {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .talent-earning-overview-right-heading {
+    font-size: 0.7rem;
+  }
+  .talent-earnign-main-container {
+    --heading-font-size: 1.3rem;
+  }
+  .talent-earning-overview-hadings-container {
+    width: 90vw;
+  }
+  .withdrawing-paypal-option-container-img img {
+    width: 70px;
+    height: 70px;
+  }
+  .withdrawing-ingle-option-container-img {
+    width: 70px;
+    height: 70px;
+  }
+  .withdrawing-ingle-option-container-img img {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .talent-earnign-main-container {
+    --heading-font-size: 1.1rem;
+  }
+}

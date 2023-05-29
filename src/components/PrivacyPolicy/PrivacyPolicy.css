@@ -1,0 +1,202 @@
+.privacy-parent-container {
+  padding-left: 6vw;
+  padding-right: 6vw;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.privacy-date-div {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.privacy-terms-div {
+  display: flex;
+  margin-right: 2vw;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.privacy-terms-text-div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+.privacy-term-text {
+  font-size: 1.5rem;
+}
+
+.privacy-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+.privacy-get-in-touch-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.privacy-get-in-touch-heading-div {
+  font-size: 2.5rem;
+}
+
+.privacy-get-in-touch-text-div {
+  font-size: 2rem;
+  font-weight: normal;
+  width: 50%;
+  margin-top: 20px;
+}
+.privacy-contact-info-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.privacy-contact-info-inner-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 200px;
+  text-align: center;
+}
+.privacy-contact-email-icon {
+  width: 30px;
+  height: 23px;
+}
+.privacy-contact-address-icon {
+  width: 20px;
+  height: 30px;
+}
+.privacy-contact-phone-icon {
+  width: 30px;
+  height: 30px;
+}
+.privacy-contact-info-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.privacy-contact-info-text {
+  font-size: 1.2rem;
+}
+.privacy-contact-info-text-two {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+/* .privacy-contact-info-icon:nth-child(2) img{
+    width: 55px;
+    height: 30px;
+
+} */
+
+@media only screen and (max-width: 1100px) {
+  .privacy-contact-info-heading {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .privacy-contact-info-text {
+    font-size: 1.1rem;
+  }
+  .privacy-contact-info-text-two {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .privacy-get-in-touch-text-div {
+    width: 60%;
+  }
+  .privacy-contact-info-heading {
+    font-size: 1.2rem;
+  }
+  .privacy-contact-info-text {
+    font-size: 1rem;
+  }
+  .privacy-contact-info-text-two {
+    font-size: 1.2rem;
+  }
+  .privacy-terms-div {
+    margin-right: 0vw;
+  }
+  .privacy-term-text {
+    font-size: 1.2rem;
+  }
+
+  .privacy-heading {
+    font-size: 2rem;
+  }
+  .privacy-get-in-touch-heading-div {
+    font-size: 2rem;
+  }
+
+  .privacy-get-in-touch-text-div {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .privacy-get-in-touch-text-div {
+    width: 75%;
+  }
+  .privacy-parent-container {
+    align-items: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .privacy-terms-div {
+    align-items: center;
+    text-align: center;
+  }
+  .privacy-terms-text-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .privacy-terms-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .privacy-date-div {
+    justify-content: center;
+  }
+  /* .privacy-contact-info-inner-div {
+    height: 160px;
+  } */
+
+  .privacy-contact-info-div {
+    flex-direction: column;
+  }
+  .privacy-terms-div {
+    margin-right: 0vw;
+  }
+  .privacy-contact-info-inner-div {
+    margin-bottom: 20px;
+  }
+
+  .privacy-contact-info-text {
+    font-size: 1.3rem;
+  }
+  .privacy-contact-info-text-two {
+    font-size: 1.3rem;
+  }
+  .privacy-contact-info-heading {
+    font-size: 1.5rem;
+  }
+  .privacy-heading {
+    font-size: 1.5rem;
+  }
+  .privacy-term-text {
+    font-size: 1rem;
+  }
+  .privacy-get-in-touch-heading-div {
+    font-size: 1.5rem;
+}
+.privacy-get-in-touch-text-div {
+    font-size: 1.3rem;
+}
+}

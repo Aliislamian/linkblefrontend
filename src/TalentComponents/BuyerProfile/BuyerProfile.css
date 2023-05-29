@@ -1,0 +1,232 @@
+.buyer-profile-container {
+  margin-left: var(--buyer-page-margin-left);
+  margin-right: var(--buyer-page-margin-right);
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  --buyer-profile-heading-size: 1.3rem;
+  margin-bottom: 50px;
+}
+
+.buyer-profile-left-container {
+  width: 50%;
+}
+
+.buyer-profile-back-btn-container {
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+  align-items: center;
+}
+.buyer-profile-back-btn-container img {
+  margin-right: 7px;
+  width: 25px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.buyer-profile-back-btn-text {
+  font-size: 0.8rem;
+  margin-bottom: 2px;
+}
+
+.buyer-profile-top-text {
+  margin-top: 10px;
+}
+
+.buyer-profile-img-container {
+  width: 80%;
+  margin-top: 20px;
+}
+.buyer-profile-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.buyer-profile-detail-heading {
+  margin-top: 15px;
+
+  font-size: var(--buyer-profile-heading-size);
+}
+
+.buyer-profile-detail-text {
+  width: 80%;
+  margin-top: 20px;
+}
+
+.buyer-profile-right-container {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buyer-profile-right-inner-container {
+  width: 60%;
+}
+
+.buyer-profile-info-container {
+  width: 100%;
+  background-color: var(--third-background-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+.buyer-profile-info-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid var(--main-color);
+  margin-left: 20px;
+  margin-right: 15px;
+}
+.buyer-profile-info-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.buyer-profile-stars {
+  font-size: 15px;
+  color: var(--stars-colors);
+}
+
+.buyer-profile-info-name {
+  font-size: 1.8rem;
+  opacity: 0.6;
+}
+.buyer-profile-info-rating-and-city {
+  display: flex;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.buyer-profile-project-detail-container {
+  width: 100%;
+  background-color: var(--third-background-color);
+  border-radius: 10px;
+  /* padding-top: 15px;
+  padding-bottom: 25px; */
+  padding-bottom: 80px;
+  position: relative;
+  margin-top: 30px;
+}
+
+.buyer-profile-project-detail-inner-container {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.buyer-profile-project-detail-headings-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.buyer-profile-project-detail-heading {
+  opacity: 0.7;
+}
+.buyer-profile-project-detail {
+  margin-top: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--border-color);
+  /* border-radius: 0; */
+}
+
+.buyer-profile-project-budget-and-time-headings-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.buyer-profile-project-budget-and-time-heading {
+  font-size: var(--buyer-profile-heading-size);
+  opacity: 0.7;
+}
+
+.buyer-profile-project-budget-and-time-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.buyer-profile-project-budget {
+  font-size: var(--buyer-profile-heading-size);
+  opacity: 0.7;
+}
+.buyer-profile-project-time {
+  opacity: 0.7;
+  font-size: var(--buyer-profile-heading-size);
+  margin-right: 20px;
+}
+
+.buyer-profile-send-offer-btn img {
+  margin-left: 15px;
+  width: 25px;
+  margin-top: 5px;
+
+  height: 15px;
+  object-fit: contain;
+}
+.buyer-profile-send-offer-btn {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+
+  cursor: pointer;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  bottom: -25px;
+  box-shadow: rgb(0, 150, 107, 0.2) 0px 2px 8px 0px;
+  left: 0;
+  font-size: 1.2rem;
+  right: 0;
+  margin: auto;
+}
+
+@media screen and (max-width: 1300px) {
+  .buyer-profile-right-inner-container {
+    width: 80%;
+  }
+  .buyer-profile-detail-text {
+    width: 90%;
+    margin-top: 20px;
+  }
+  .buyer-profile-img-container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .buyer-profile-right-inner-container {
+    width: 90%;
+  }
+  .buyer-profile-detail-text {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .buyer-profile-img-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .buyer-profile-container {
+    --buyer-profile-heading-size: 1.3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .buyer-profile-left-container {
+    width: 90vw;
+    margin-bottom: 50px;
+  }
+  .buyer-profile-right-container {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+  }
+}

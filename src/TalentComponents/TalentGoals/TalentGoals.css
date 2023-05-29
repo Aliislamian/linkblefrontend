@@ -1,0 +1,65 @@
+.talent-goals-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.talent-next-level-requirement-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--main-color);
+  border-radius: 7px;
+  width: 12rem;
+  color: var(--text-color);
+  min-height: 5rem;
+  padding: 10px;
+}
+
+.talent-next-level-requirement-dot {
+  width: 10px;
+  margin-right: 40px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 2px;
+}
+
+.talent-next-level-requirement-text {
+  font-size: 1.2rem;
+}
+.talent-next-level-requirement-inner-container {
+  width: 90%;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.talent-next-level-requirement-inner-text {
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 950px) {
+  .talent-next-level-requirement-container {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .talent-goals-container {
+    width: 90vw;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .talent-next-level-requirement-container {
+    margin-right: 0;
+    width: 90vw;
+  }
+}

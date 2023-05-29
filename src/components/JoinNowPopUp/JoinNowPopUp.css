@@ -1,0 +1,466 @@
+.parent-div {
+  width: 100%;
+  /* height: 160px !important; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-top: 82px;
+  /* position: relative; */
+}
+.popup_main {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-self: center;
+  /* top: 0; */
+
+  /* position: absolute; */
+  /* padding-bottom: 625px; */
+}
+.popUp_sub_main {
+  /* width: 80vw;
+  
+  height: 80vh; */
+
+  width: 85vw;
+  height: 85vh;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  z-index: 2;
+  position: fixed;
+  flex-wrap: nowrap;
+  /* box-shadow: gray 2px 5px 5px 5px; */
+}
+.first_main {
+  /* background-color: coral; */
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+  width: 60%;
+}
+.pic_above_css {
+  padding-top: 3.3rem;
+  width: 80%;
+  display: flex;
+  padding-left: 3.5vw;
+  font-weight: 700;
+  font-size: var(--medium-size);
+}
+.second_main {
+  margin-right: 1vw;
+  height: 100%;
+  width: 40%;
+  /* background-color: brown; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cross_icon_main {
+  display: flex;
+  justify-content: flex-end;
+  /* padding: 1vw; */
+  bottom: 0;
+  align-items: end;
+}
+.join_now_cross_icon_css {
+  height: 70%;
+  cursor: pointer;
+}
+.welcome_heading {
+  display: flex;
+  justify-content: center;
+  font-size: var(--medium-size);
+  font-weight: 700;
+}
+.welcome_heading_below_text {
+  display: flex;
+  justify-content: center;
+  font-size: var(--mobile-small-text);
+  margin-top: 2rem;
+}
+.main_div_input_field {
+  display: flex;
+  flex-direction: column;
+}
+.email_tag_div {
+  padding-left: 15%;
+  padding-top: 1rem;
+  font-size: small;
+}
+._input_field {
+  width: 70%;
+  height: 50px;
+  background-color: white;
+  margin-left: 15%;
+  border-radius: 25px;
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  padding-left: 1.25vw;
+}
+.email_Icon_css_1 {
+  height: 17px;
+  width: 23px;
+}
+.email_Icon_css_2 {
+  width: 16px;
+  height: 21px;
+}
+.input_css {
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  width: 80%;
+  /* padding-right: 1rem; */
+}
+
+.password_tag_div {
+  padding-left: 15%;
+  padding-top: 5px;
+  font-size: small;
+}
+.eye_css {
+  display: flex;
+  align-self: flex-end;
+  align-self: center;
+  height: 30%;
+}
+.main_forgot_password_checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.checkBox_remeber_me_div {
+  margin-left: 15%;
+  padding-top: 5px;
+  display: flex;
+  /* background-color: yellow; */
+}
+.checkbox_css {
+  border-radius: 50%;
+}
+.check-list-before {
+  width: 22px !important;
+  cursor: pointer;
+  height: 22px !important;
+  /* background-color: var(--main-color); */
+  /* background: var(--main-color); */
+  border-radius: 50%;
+  /* color: white; */
+}
+.check-list-after {
+  width: 22px !important;
+  cursor: pointer;
+  height: 22px !important;
+  /* background-color: var(--main-color); */
+  /* background: var(--main-color); */
+  background-color: var(--main-color);
+  border-radius: 50%;
+  color: white;
+}
+.remeber_me_text {
+  font-size: small;
+  padding-left: 15px;
+}
+
+.forgot_password_div {
+  color: red;
+  font-size: small;
+  margin-right: 12%;
+  cursor: pointer;
+}
+/* .forgot_password_div:hover{
+    color: darkred;
+} */
+.sign_in_button_main {
+  margin-left: 15%;
+  width: 75%;
+  height: 50px;
+  background-color: #00966b;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Join_now_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.dont_have_account_text_css {
+  color: darkgray;
+  font-size: 11px;
+}
+.join_now_text_css {
+  cursor: pointer;
+  font-weight: 600;
+  padding-left: 5px;
+  font-weight: 700;
+}
+
+/* .join_now_text_css:hover{
+    font-weight: 700;
+} */
+.sign_in_with_main {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15%;
+}
+.left_line {
+  display: flex;
+  align-self: center;
+  width: 25%;
+  border-top: 1px solid var(--main-color);
+}
+.text_between_line {
+  font-size: small;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.right_line {
+  display: flex;
+  align-self: center;
+  width: 25%;
+  border-top: 1px solid #00966b;
+}
+.google_facebook_main {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15%;
+  margin-right: 12%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.google_div {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 40%;
+  border-radius: 25px;
+  background-color: #4285f4;
+}
+.google_icon_css {
+  height: 50%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.google_text {
+  color: white;
+  font-size: 14px;
+}
+.facebook_div {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 40%;
+  border-radius: 25px;
+  background-color: #4267b2;
+}
+.facebook_icon_css {
+  height: 50%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.facebook_text {
+  color: white;
+  font-size: 14px;
+}
+
+._input_field {
+  border: 1.8px solid var(--main-color-with-opacity);
+}
+
+@media only screen and (max-width: 1300px) {
+  .first_main {
+    width: 50%;
+  }
+  .second_main {
+    width: 50%;
+  }
+  .join_now_image {
+    width: 400px;
+  }
+  .pic_above_css {
+    width: 95%;
+    font-size: var(--small-size);
+  }
+  .welcome_heading {
+    font-size: var(--small-size);
+  }
+  .welcome_heading_below_text {
+    width: 80%;
+    align-self: center;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .pic_above_css {
+    width: 100%;
+    padding-top: 2.7rem;
+    font-size: var(--small-size);
+  }
+  .join_now_image {
+    width: 300px;
+  }
+  .first_main {
+    width: 40%;
+  }
+  .second_main {
+    width: 60%;
+  }
+  .google_facebook_main {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .first_main {
+    display: none;
+  }
+  .second_main {
+    width: 100%;
+  }
+  .google_facebook_main {
+    margin-left: 15%;
+    margin-right: 12%;
+  }
+  .email_tag_div {
+    padding-left: 0%;
+    padding-top: 1rem;
+    text-align: center;
+  }
+  .password_tag_div {
+    padding-left: 0%;
+    padding-top: 5px;
+    font-size: small;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .parent-div {
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sign_in_button_main {
+    height: 40px;
+  }
+  .google_facebook_main {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+  .google_div {
+    width: 45%;
+  }
+  .facebook_div {
+    width: 45%;
+  }
+  .sign_in_with_main {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0%;
+    justify-content: center;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  .left_line {
+    width: 20%;
+  }
+  .right_line {
+    width: 20%;
+  }
+
+  .checkBox_remeber_me_div {
+    margin-left: 10%;
+    padding-top: 5px;
+    justify-content: center;
+    display: flex;
+  }
+  .forgot_password_div {
+    margin-right: 10%;
+  }
+  ._input_field {
+    height: 40px;
+    width: 80%;
+    margin-left: 0%;
+    display: flex;
+    align-items: center;
+    padding-left: 2.25vw;
+  }
+
+  .first-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .second-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .popUp_sub_main {
+    width: 90vw;
+  }
+  .email_Icon_css_1 {
+    height: 14px;
+    width: 20px;
+  }
+  .email_Icon_css_2 {
+    height: 18px;
+    width: 13px;
+    margin-right: 3px;
+    margin-left: 4px;
+  }
+  .remeber_me_text {
+    padding-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .checkBox_remeber_me_div {
+    margin-left: 5%;
+  }
+  .forgot_password_div {
+    margin-right: 5%;
+  }
+  ._input_field {
+    width: 90%;
+  }
+  .google_facebook_main {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .google_div {
+    font-size: xx-small;
+  }
+  .google_icon_css {
+    height: 50%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .google_text {
+    font-size: 12px;
+  }
+  .facebook_icon_css {
+    height: 50%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .facebook_text {
+    font-size: 12px;
+  }
+}

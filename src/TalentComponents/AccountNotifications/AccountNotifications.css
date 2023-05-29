@@ -1,0 +1,116 @@
+.talent-account-notification-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  --talent-account-notification-font-size: 1.7rem;
+}
+
+.talent-account-notification-form img {
+  width: 60px;
+  height: 70px;
+}
+.talent-account-notification-form-top-heading {
+  margin-top: 10px;
+  color: var(--light-color);
+  font-size: var(--talent-account-notification-font-size);
+  margin-bottom: 40px;
+}
+
+.talent-account-notifications-options-container {
+  width: 50%;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.talent-account-notifications-option-icon img {
+  width: 17px;
+  height: 17px;
+  margin-top: 8px;
+}
+
+.talent-account-notifications-email-icon {
+  width: 20px !important;
+  height: 15px !important;
+}
+.talent-account-notifications-option-right-content {
+  display: flex;
+  width: 90%;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.account-notifications-toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.account-notifications-toggle-switch {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  width: 45px;
+  height: 23px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+.account-notifications-toggle-switch:before,
+.account-notifications-toggle-switch:after {
+  content: "";
+}
+.account-notifications-toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 2px;
+  margin: auto;
+  transition: left 0.25s;
+}
+.account-notifications-toggle:hover
+  .account-notifications-toggle-switch:before {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.account-notifications-toggle-checkbox:checked
+  + .account-notifications-toggle-switch {
+  background: var(--light-color);
+}
+.account-notifications-toggle-checkbox:checked
+  + .account-notifications-toggle-switch:before {
+  left: 25px;
+}
+
+.account-notifications-toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.account-notifications-toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.talent-account-notifications-option-right-content-text {
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .talent-account-notifications-options-container {
+    width: 90%;
+  }
+  .talent-account-notification-form-img{
+    width: 50px !important;
+    height: 60px !important;
+  }
+}
