@@ -15,9 +15,10 @@ import autoSave from "../../images/autoSave.png";
 import responseTime from "../../images/responseTime.png";
 import topArrowIcon from "../../images/topArrowIcon.png";
 import TalentBtn from "../TalentBtn/TalentBtn";
+import CustomOffer from "../CustomOffer/CustomOffer";
 const SelectOfferPopUP = (props) => {
 
-
+    var getData = '';
   const [selectedOption, setSelectedOption] = useState('');
   const [post , setPost] = useState({
     description: '',
@@ -26,31 +27,39 @@ const SelectOfferPopUP = (props) => {
     revisions: '',
     services: '',
   })
+  const [data , setData] = useState([]);
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
-
   const handleInput = (event) => {
       setPost({...post, [event.target.name]: event.target.value})
-      console.log("===========================>>>>>>>",setPost);
   }
-
-  // function handleSubmit(event) {
-  //   event.preventDefault()
-  //   axios.post('https://linkablebackend-production-e3d2.up.railway.app/sendoffer', {post})
-  //   .then(res => post)
-  //   .catch(err => console.log(err))
-  // }
-  const handleSubmit = async () => {
+  const sendDataToDatabase = async (data) => {
     try {
-      const response = await axios.post('https://linkablebackend-production-e3d2.up.railway.app/sendoffer', {
-        data: 'example',
-      });
-      console.log(response.data);
+      const response = await axios.post('https://linkablebackend-production-e3d2.up.railway.app/sendoffer', data);
+      console.log("=========>>>>>>>POst",response.data);
+    } catch (error) {
+      console.error(error);
+    }
+    try {
+      const response = await axios.get('https://linkablebackend-production-e3d2.up.railway.app/sendoffer', data);
+      getData = response.data;
+
     } catch (error) {
       console.error(error);
     }
   };
+  function handleSubmit(e) {
+    e.preventDefault();
+    const data = {
+      description: post.description,
+      budget: post.budget,
+      delivery_time: post.delivery_time,
+      revisions: post.revisions,
+      services: post.services
+    };
+    sendDataToDatabase(data);
+  }
   return (
 
      <Dialog
@@ -188,11 +197,11 @@ const SelectOfferPopUP = (props) => {
             <div className="select-offer-details-right-container" onChange={handleInput}>
               <select onChange={handleOptionChange} name="revisions">
               <option value="Select Days"></option>
-        <option value="option1">1</option>
-        <option value="option2">2</option>
-        <option value="option3">3</option>
-        <option value="option3">4</option>
-        <option value="option3">5</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
             </select>
             </div>
           </div>
@@ -208,10 +217,10 @@ const SelectOfferPopUP = (props) => {
             <div className="select-offer-details-right-container" onChange={handleInput}>
               <select onChange={handleOptionChange} name="services">
               <option value="Select Days"></option>
-        <option value="option1">App</option>
-        <option value="option2">Web</option>
-        <option value="option3">AI</option>
-        <option value="option3">IOT</option>
+        <option value="App">App</option>
+        <option value="web">Web</option>
+        <option value="AI">AI</option>
+        <option value="IOT">IOT</option>
             </select>
             </div>
           </div>
@@ -270,7 +279,9 @@ const SelectOfferPopUP = (props) => {
             </div>
           </div>
           <div className="select-offer-btn-container">
-          <button type="submit" >Submit</button>
+          <button type="submit"  class="bg-[#47966B] hover:bg-[#47966B] text-white font-bold py-2 px-4 rounded">
+                  Submit
+                </button>
           </div>
         </div>
    </form>
