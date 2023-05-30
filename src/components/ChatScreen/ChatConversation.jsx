@@ -12,6 +12,7 @@ import sentTextIcon from "../../images/sentTextIcon.png";
 import SelectPaymentPopUp from "../../TalentComponents/SelectPaymentPopUp/SelectPaymentPopUp";
 import SelectServicePopUp from "../../TalentComponents/SelectServicePopUp/SelectServicePopUp";
 import SelectOfferPopUP from "../../TalentComponents/SelectOfferPopUP/SelectOfferPopUP";
+import SelectAcceptServicePopUp from "../AcceptOffer/SelectAcceptServicePopUp ";
 
 import { StarBorder } from "@material-ui/icons";
 import newRequest, { baseURL } from "../../utils/newRequest";
@@ -22,9 +23,18 @@ const ChatConversation = (props, username) => {
   const [servicePopUpState, setServicePopUpState] = useState(false);
   const [paymentPopUpState, setPaymentPopUpState] = useState(false);
   const [offerPopUpState, setOfferPopUpState] = useState(false);
+  const [Acceptoffer ,  setAcceptoffer] =useState(false)
+
+
+
   const handleServicePopUP = () => {
     setServicePopUpState(false);
   };
+const handleAcceptservicePopup =()=>{
+  setAcceptoffer(false)
+  console.log("hasgd", Acceptoffer)
+
+}
   const handlePaymentPopUP = () => {
     setPaymentPopUpState(false);
   };
@@ -33,8 +43,10 @@ const ChatConversation = (props, username) => {
   };
   const HandleServiceSelection = () => {
     setServicePopUpState(false);
+  setAcceptoffer(false)
     setPaymentPopUpState(true);
   };
+  
   const handelCreatePaymetOffer = () => {
     setServicePopUpState(false);
     setPaymentPopUpState(false);
@@ -162,17 +174,23 @@ const ChatConversation = (props, username) => {
 <>
    <div className="chat_conversation_main_div">
 
-   <SelectServicePopUp
+    <SelectServicePopUp
         servicePopUpState={servicePopUpState}
         handleServicePopUP={handleServicePopUP}
         HandleServiceSelection={HandleServiceSelection}
       />
+      <SelectAcceptServicePopUp
+          Acceptoffer={Acceptoffer}
+          handleAcceptservicePopup ={handleAcceptservicePopup }
+        HandleServiceSelection={HandleServiceSelection}
+        />
+
 
       <SelectPaymentPopUp
         paymentPopUpState={paymentPopUpState}
         handlePaymentPopUP={handlePaymentPopUP}
         handelCreatePaymetOffer={handelCreatePaymetOffer}
-      />
+      /> 
       <SelectOfferPopUP
         offerPopUpState={offerPopUpState}
         handleofferPopUp={handleofferPopUp}
@@ -180,6 +198,7 @@ const ChatConversation = (props, username) => {
       <div className="chat_box_header_main">
         <div className="chat_box_header_left">
           <div className="receiver_profile_pic_main_div">
+            
             <img src={Picture} alt="img" className="receiver_profile_pic_css" />
           </div>
 
@@ -194,6 +213,15 @@ const ChatConversation = (props, username) => {
               </div>
           </div>
         </div>
+        <div
+            className="sent-offer-btn"
+            onClick={() => {
+              handleAcceptservicePopup()
+              setAcceptoffer(true);
+            }}
+          >
+            AcceptOffer
+          </div>
 
         <div className="chat_box_header_icons_container">
           <div className="chat_box_header_icons">
