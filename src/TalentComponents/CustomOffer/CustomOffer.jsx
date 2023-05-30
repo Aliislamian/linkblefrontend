@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import axios from "axios";
 import "./CustomOffer.css";
 import budget from "../../images/budget.png";
 import revisionIcon from "../../images/revisionIcon.png";
@@ -6,6 +7,22 @@ import service from "../../images/service.png";
 import responseTime from "../../images/responseTime.png";
 
 const CustomOffer = () => {
+
+  const [offerData, setOfferData] = useState(null);
+
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get("https://linkablebackend-production-e3d2.up.railway.app/sendoffer");
+          setOfferData(console.log(response.data.data));
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      fetchData();
+    }, []);
+  
+   
   return (
     <div className="custom-offer-container">
       <div className="custom-offer-top-container">
