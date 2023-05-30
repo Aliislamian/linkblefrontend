@@ -220,7 +220,7 @@ const handleAcceptservicePopup =()=>{
               setAcceptoffer(true);
             }}
           >
-            AcceptOffer
+            Accept Offer
           </div>
 
         <div className="chat_box_header_icons_container">
