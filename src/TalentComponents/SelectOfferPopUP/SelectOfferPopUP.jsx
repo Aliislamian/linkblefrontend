@@ -286,6 +286,7 @@ const SelectOfferPopUP = (props) => {
           </div>
           <div className="select-offer-btn-container">
             <SelectAcceptServicePopUp data={getData} />
+            <CustomOffer data={getData} />
           <button type="submit" class="bg-[#47966B] hover:bg-[#47966B] text-white font-bold py-2 px-4 rounded">
                   Submit
                 </button>

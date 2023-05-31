@@ -41,52 +41,52 @@ const SelectAcceptServicePopUp = (props) => {
         <span className="customspan">here is your Custum offer</span>
         </div> */}
 
-        <div  className="card">
+<div  className="card">
 
-          <div className="card1">
+<div className="card1">
 
-            <h1 className="card1h1">i will write seo optimized content</h1>
-            <span  className="card1span">$ 40</span>
-          </div>
-          <hr />
-           <div className="card2">
-            <p className="card2p">Contrary to popular belief, word in classical literature</p>
-          </div>
-          <hr />
-          <div className="card3">
+  <h1 className="card1h1">i will write seo optimized content</h1>
+  <span  className="card1span">$ 40</span>
+</div>
+<hr />
+ <div className="card2">
+  <p className="card2p">Contrary to popular belief, word in classical literature</p>
+</div>
+<hr />
+<div className="card3">
 
-          <h1 className="card3h1">Your offer include</h1>
-          <div  className="spandiv">
-                   <img className="spanimage" src={greenclock} alt="" />
-                   <span className="card3span">2 day revision</span>
-                   <img className="spanimage" src={greenclock} alt="" />
-                  <span className="card3span">2 day delivery</span>
-                  <img className="spanimage" src={tickGreen} alt="" />
-                  <span className="card3span">Service</span>
-
-                  </div>
-               </div>
-              <hr />  
-              <div  className="Expireoffer">
-
-                <span  className="Expireoffespan">offer expire on 2 jun 20233</span>
-    
-             <div  className="Expireofferbtn">
-             <button className="vieworderbtn">
-                  view order
-                </button>
-                
-                <button  className="Acceptofferbtn">
-                   offer  Accepted
-                </button>
-
-
-             </div>
-             <hr/>
-              
-                 </div>
+<h1 className="card3h1">Your offer include</h1>
+<div  className="spandiv">
+         <img className="spanimage" src={greenclock} alt="" />
+         <span className="card3span">2 day revision</span>
+         <img className="spanimage" src={greenclock} alt="" />
+        <span className="card3span">2 day delivery</span>
+        <img className="spanimage" src={tickGreen} alt="" />
+        <span className="card3span">Service</span>
 
         </div>
+     </div>
+    <hr />  
+    <div  className="Expireoffer">
+
+      <span  className="Expireoffespan">offer expire on 2 jun 20233</span>
+
+   <div  className="Expireofferbtn">
+   <button className="vieworderbtn">
+        view order
+      </button>
+      
+      <button  className="Acceptofferbtn">
+         offer  Accepted
+      </button>
+
+
+   </div>
+   <hr/>
+    
+       </div>
+
+</div>
       </div>
 
 
