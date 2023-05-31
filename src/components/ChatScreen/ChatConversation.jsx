@@ -17,6 +17,7 @@ import SelectAcceptServicePopUp from "../AcceptOffer/SelectAcceptServicePopUp";
 import { StarBorder } from "@material-ui/icons";
 import newRequest, { baseURL } from "../../utils/newRequest";
 import socketIOClient from 'socket.io-client';
+import axios from "axios";
 
 const ChatConversation = (props, username) => {
     // console.log(data)
@@ -53,7 +54,7 @@ const handleAcceptservicePopup =()=>{
 
   // creatae state to get the currentUser from local storage if it exists or else set it to null
   const [currentUser, setCurrentUser] = useState(
-    JSON.parse(localStorage.getItem("currentUser"))
+    // JSON.parse(localStorage.getItem("currentUser"))
 
 
   );
@@ -65,7 +66,26 @@ const handleAcceptservicePopup =()=>{
 
   ]);
 
+  const [PropData, setPropData] = useState();
+
+
+  const getData=async()=>{
+    try {
+    const response = await axios.get('https://linkablebackend-production-e3d2.up.railway.app/sendoffer', data);
+    // console.log("=========>>>>>>>get",response.data);
+    const data =await response.data;
+    setPropData(data.data)
+// console.log('show me data',data);
+
+    // setGetData(data);
+
+  } catch (error) {
+    console.error(error);
+  }
+  }
+
   useEffect(() => {
+    getData()
     // socket.current = socketIOClient('http://localhost:5000');
     socket.current = socketIOClient(baseURL);
 
@@ -115,10 +135,8 @@ const handleAcceptservicePopup =()=>{
   }, [messageData]);
 
   useEffect(() => {
-    console.log("useEffect called");
 
     socket.current.on('message', (message) => {
-      console.log("Inside socket", message);
       // Here you update your state with the new message
       // setMessageData((prev) => [...prev, message]);
     });
@@ -175,6 +193,7 @@ const handleAcceptservicePopup =()=>{
         HandleServiceSelection={HandleServiceSelection}
       />
       <SelectAcceptServicePopUp
+      PropData={PropData}
           Acceptoffer={Acceptoffer}
           handleAcceptservicePopup ={handleAcceptservicePopup }
         HandleServiceSelection={HandleServiceSelection}

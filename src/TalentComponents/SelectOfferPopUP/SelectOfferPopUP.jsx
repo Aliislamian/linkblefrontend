@@ -29,7 +29,11 @@ const SelectOfferPopUP = (props) => {
     revisions: '',
     services: '',
   })
+  
+
+
   useEffect(() => {
+  console.log("testing poop");
     const storedData = localStorage.getItem("apiData");
     if (storedData) {
       setGetData(JSON.parse(storedData));

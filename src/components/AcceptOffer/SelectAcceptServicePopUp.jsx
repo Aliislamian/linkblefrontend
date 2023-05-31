@@ -8,15 +8,35 @@ import profilepic from "../../images/profilepic.png"
 import tickGreen from "../../images/tickGreen.png"
 import orderUpdate from "../../images/orderUpdate.png"
 import greenclock from "../../images/greenclock.png"
+import axios from "axios";
 
-const SelectAcceptServicePopUp = ( props ) => {
-        console.log("propsssssss",props.data)
+const SelectAcceptServicePopUp = ( {PropData,Acceptoffer,handleAcceptservicePopup} ) => {
+// let {_id,description}=PropData
+console.log(PropData && PropData._id,"prop data");
+
+  const getData2=async()=>{
+    try {
+    const response = await axios.get('https://linkablebackend-production-e3d2.up.railway.app/sendoffer');
+    // console.log("=========>>>>>>>get",response.data);
+    const data =await response.data;
+// console.log('show me data',data);
+    // setGetData(data);
+
+  } catch (error) {
+    console.error(error);
+  }
+  }
+
+  useEffect(()=>{
+          // console.log("fuckkkkkkkkkkkk")
+          getData2()
+        },[])
   return (
     <>
       <Dialog
         className="select-service-dialog"
-        open={props.Acceptoffer}
-        onClose={props.handleAcceptservicePopup}
+        open={Acceptoffer}
+        onClose={handleAcceptservicePopup}
         fullScreen={true}
         fullWidth={true}>
         <div className="Main">
@@ -34,7 +54,9 @@ const SelectAcceptServicePopUp = ( props ) => {
             </div>
             <hr />
             <div className="card2">
-              <p className="card2p">Contrary to popular belief, word in classical literature</p>
+              <p className="card2p">{PropData && PropData._id}</p>
+              <p className="card2p">{PropData && PropData.budget}</p>
+              
             </div>
             <hr />
             <div className="card3">
