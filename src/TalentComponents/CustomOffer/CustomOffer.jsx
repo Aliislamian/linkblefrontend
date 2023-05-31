@@ -5,8 +5,9 @@ import revisionIcon from "../../images/revisionIcon.png";
 import service from "../../images/service.png";
 import responseTime from "../../images/responseTime.png";
 
-const CustomOffer = () => {
-  
+const CustomOffer = (props) => {
+
+  console.log("sddsdsasdsa"  ,props.data)
   return (
     <div className="custom-offer-container">
       <div className="custom-offer-top-container">

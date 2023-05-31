@@ -18,6 +18,11 @@ import TalentBtn from "../TalentBtn/TalentBtn";
 import CustomOffer from "../CustomOffer/CustomOffer";
 import TalentChatPage from "../../TalentPages/TalentChatPage/TalentChatPage";
 import SelectAcceptServicePopUp from "../../components/AcceptOffer/SelectAcceptServicePopUp ";
+
+
+
+
+
 const SelectOfferPopUP = (props) => {
    var customData = '';
   const [selectedOption, setSelectedOption] = useState('');
@@ -29,9 +34,12 @@ const SelectOfferPopUP = (props) => {
     revisions: '',
     services: '',
   })
+
+  const [data ,SetData ]  =useState('')
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
+ 
   const handleInput = (event) => {
       setPost({...post, [event.target.name]: event.target.value})
   }
@@ -65,7 +73,10 @@ const SelectOfferPopUP = (props) => {
     };
     sendDataToDatabase(data);
   };
-
+  const updateData = () => {
+    const newData =  getData
+    SetData (newData);
+  };
   console.log("get data",getData);
   return (
 
@@ -76,6 +87,7 @@ const SelectOfferPopUP = (props) => {
       fullWidth={true}
     >
       <div className="select-offer-popup-container">
+ 
         <form onSubmit={handleSubmit}>
         <div className="select-offer-popup-inner-container">
           <div className="select-offer-cross-icon">
@@ -285,12 +297,15 @@ const SelectOfferPopUP = (props) => {
             </div>
           </div>
           <div className="select-offer-btn-container">
-            <SelectAcceptServicePopUp data={getData} />
-            <CustomOffer data={getData} />
-          <button type="submit" class="bg-[#47966B] hover:bg-[#47966B] text-white font-bold py-2 px-4 rounded">
-                  Submit
-                </button>
-          </div>
+         {data && <CustomOffer data={getData} />} 
+          <SelectAcceptServicePopUp data={getData} />
+ 
+  
+  <button type="submit" className="bg-[#47966B] hover:bg-[#47966B] text-white font-bold py-2 px-4 rounded">
+    Submit
+  </button>
+</div>
+          
         </div>
    </form>
       </div>
