@@ -4,6 +4,7 @@ import Navbar from "../MyNav/Navbar";
 import ChatList from "./ChatList";
 import ChatConversation from "./ChatConversation";
 import { useRef } from "react";
+import SelectOfferPopUP from "../../TalentComponents/SelectOfferPopUP/SelectOfferPopUP";
 
 const ChatScreen = () => {
   const navRef = useRef();
@@ -30,6 +31,9 @@ const ChatScreen = () => {
         </div>
         <div className="chat_screen_chat_conversation_comp_div_main">
           <ChatConversation user={selectedUser} />
+        </div>
+        <div className="chat_screen_chat_conversation_comp_div_main">
+          <SelectOfferPopUP user={selectedUser} />
         </div>
       </div>
     </div>

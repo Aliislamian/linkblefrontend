@@ -32,8 +32,6 @@ const ChatConversation = (props, username) => {
   };
 const handleAcceptservicePopup =()=>{
   setAcceptoffer(false)
-  console.log("hasgd", Acceptoffer)
-
 }
   const handlePaymentPopUP = () => {
     setPaymentPopUpState(false);
@@ -80,9 +78,7 @@ const handleAcceptservicePopup =()=>{
         }
       });
     };
-
     socket.current.on('message', handleMessage);
-
     return () => {
       socket.current.off('message', handleMessage);
       socket.current.disconnect();
@@ -168,7 +164,6 @@ const handleAcceptservicePopup =()=>{
       return { class: 'personOne message_text_container', img: null };  // You can replace null with the other user's image if available
     }
   };
-
 
   return (
 <>

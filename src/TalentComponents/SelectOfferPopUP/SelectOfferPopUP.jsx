@@ -16,9 +16,9 @@ import responseTime from "../../images/responseTime.png";
 import topArrowIcon from "../../images/topArrowIcon.png";
 import TalentBtn from "../TalentBtn/TalentBtn";
 import CustomOffer from "../CustomOffer/CustomOffer";
+import TalentChatPage from "../../TalentPages/TalentChatPage/TalentChatPage";
 const SelectOfferPopUP = (props) => {
 
-    var getData = '';
   const [selectedOption, setSelectedOption] = useState('');
   const [post , setPost] = useState({
     description: '',
@@ -27,7 +27,6 @@ const SelectOfferPopUP = (props) => {
     revisions: '',
     services: '',
   })
-  const [data , setData] = useState([]);
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
@@ -41,15 +40,8 @@ const SelectOfferPopUP = (props) => {
     } catch (error) {
       console.error(error);
     }
-    try {
-      const response = await axios.get('https://linkablebackend-production-e3d2.up.railway.app/sendoffer', data);
-      getData = response.data;
-
-    } catch (error) {
-      console.error(error);
-    }
   };
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const data = {
       description: post.description,
@@ -59,7 +51,7 @@ const SelectOfferPopUP = (props) => {
       services: post.services
     };
     sendDataToDatabase(data);
-  }
+  };
   return (
 
      <Dialog
@@ -69,8 +61,7 @@ const SelectOfferPopUP = (props) => {
       fullWidth={true}
     >
       <div className="select-offer-popup-container">
-   <form onSubmit={handleSubmit}>
-
+        <form onSubmit={handleSubmit}>
         <div className="select-offer-popup-inner-container">
           <div className="select-offer-cross-icon">
             <img src={cross3} alt="cross"
@@ -279,7 +270,7 @@ const SelectOfferPopUP = (props) => {
             </div>
           </div>
           <div className="select-offer-btn-container">
-          <button type="submit"  class="bg-[#47966B] hover:bg-[#47966B] text-white font-bold py-2 px-4 rounded">
+          <button type="submit" class="bg-[#47966B] hover:bg-[#47966B] text-white font-bold py-2 px-4 rounded">
                   Submit
                 </button>
           </div>
