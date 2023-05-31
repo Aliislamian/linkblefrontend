@@ -2,7 +2,6 @@ import React from "react";
 import "../AcceptOffer/Acceptoffer.css"
 import cross3 from "../../images/cross3.png";
 import one from "../../images/one.png";
-// import BlueBackgroundTick from "../../images/BlueBackgroundTick.png";
 import StarIcon from "@material-ui/icons/Star";
 import Dialog from "@mui/material/Dialog";
 import profilepic from  "../../images/profilepic.png"
@@ -11,7 +10,10 @@ import orderUpdate  from "../../images/orderUpdate.png"
 import greenclock from "../../images/greenclock.png"
 
 const SelectAcceptServicePopUp = (props) => {
-  
+  // const { budget, description, delivery_time, revisions, services } = props.data;
+  // const propertyNames = Object.keys(props.data);
+
+// console.log(propertyNames);
   return (
     <>
     <Dialog

@@ -17,9 +17,11 @@ import topArrowIcon from "../../images/topArrowIcon.png";
 import TalentBtn from "../TalentBtn/TalentBtn";
 import CustomOffer from "../CustomOffer/CustomOffer";
 import TalentChatPage from "../../TalentPages/TalentChatPage/TalentChatPage";
+import SelectAcceptServicePopUp from "../../components/AcceptOffer/SelectAcceptServicePopUp ";
 const SelectOfferPopUP = (props) => {
-
+   var customData = '';
   const [selectedOption, setSelectedOption] = useState('');
+  const [getData, setGetData] = useState("");
   const [post , setPost] = useState({
     description: '',
     budget: '',
@@ -37,10 +39,21 @@ const SelectOfferPopUP = (props) => {
     try {
       const response = await axios.post('https://linkablebackend-production-e3d2.up.railway.app/sendoffer', data);
       console.log("=========>>>>>>>POst",response.data);
+      
+    } catch (error) {
+      console.error(error);
+    }
+    try {
+      const response = await axios.get('https://linkablebackend-production-e3d2.up.railway.app/sendoffer', data);
+      // console.log("=========>>>>>>>get",response.data);
+      setGetData(response.data);
+      
+    
     } catch (error) {
       console.error(error);
     }
   };
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = {
@@ -52,6 +65,8 @@ const SelectOfferPopUP = (props) => {
     };
     sendDataToDatabase(data);
   };
+
+  console.log("get data",getData);
   return (
 
      <Dialog
@@ -270,6 +285,7 @@ const SelectOfferPopUP = (props) => {
             </div>
           </div>
           <div className="select-offer-btn-container">
+            <SelectAcceptServicePopUp data={getData} />
           <button type="submit" class="bg-[#47966B] hover:bg-[#47966B] text-white font-bold py-2 px-4 rounded">
                   Submit
                 </button>
