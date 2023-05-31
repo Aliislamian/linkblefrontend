@@ -12,7 +12,7 @@ import sentTextIcon from "../../images/sentTextIcon.png";
 import SelectPaymentPopUp from "../../TalentComponents/SelectPaymentPopUp/SelectPaymentPopUp";
 import SelectServicePopUp from "../../TalentComponents/SelectServicePopUp/SelectServicePopUp";
 import SelectOfferPopUP from "../../TalentComponents/SelectOfferPopUP/SelectOfferPopUP";
-import SelectAcceptServicePopUp from "../AcceptOffer/SelectAcceptServicePopUp ";
+import SelectAcceptServicePopUp from "../AcceptOffer/SelectAcceptServicePopUp";
 
 import { StarBorder } from "@material-ui/icons";
 import newRequest, { baseURL } from "../../utils/newRequest";

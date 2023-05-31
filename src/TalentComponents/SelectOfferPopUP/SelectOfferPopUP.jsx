@@ -17,7 +17,7 @@ import topArrowIcon from "../../images/topArrowIcon.png";
 import TalentBtn from "../TalentBtn/TalentBtn";
 import CustomOffer from "../CustomOffer/CustomOffer";
 import TalentChatPage from "../../TalentPages/TalentChatPage/TalentChatPage";
-import SelectAcceptServicePopUp from "../../components/AcceptOffer/SelectAcceptServicePopUp ";
+import SelectAcceptServicePopUp from "../../components/AcceptOffer/SelectAcceptServicePopUp";
 const SelectOfferPopUP = (props) => {
    var customData = '';
   const [selectedOption, setSelectedOption] = useState('');
@@ -29,6 +29,12 @@ const SelectOfferPopUP = (props) => {
     revisions: '',
     services: '',
   })
+  useEffect(() => {
+    const storedData = localStorage.getItem("apiData");
+    if (storedData) {
+      setGetData(JSON.parse(storedData));
+    }
+  }, []);
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
@@ -46,7 +52,9 @@ const SelectOfferPopUP = (props) => {
     try {
       const response = await axios.get('https://linkablebackend-production-e3d2.up.railway.app/sendoffer', data);
       // console.log("=========>>>>>>>get",response.data);
-      setGetData(response.data);
+      const data = response.data;
+      setGetData(data);
+      localStorage.setItem("apiData", JSON.stringify(data));
       
     
     } catch (error) {
@@ -286,7 +294,7 @@ const SelectOfferPopUP = (props) => {
           </div>
           <div className="select-offer-btn-container">
             <SelectAcceptServicePopUp data={getData} />
-            <CustomOffer data={getData} />
+            {/* <CustomOffer data={getData} /> */}
           <button type="submit" class="bg-[#47966B] hover:bg-[#47966B] text-white font-bold py-2 px-4 rounded">
                   Submit
                 </button>
