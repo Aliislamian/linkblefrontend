@@ -20,14 +20,10 @@ import socketIOClient from 'socket.io-client';
 import axios from "axios";
 
 const ChatConversation = (props) => {
-
   const [servicePopUpState, setServicePopUpState] = useState(false);
   const [paymentPopUpState, setPaymentPopUpState] = useState(false);
   const [offerPopUpState, setOfferPopUpState] = useState(false);
   const [Acceptoffer ,  setAcceptoffer] =useState(false)
-
-
-
   const handleServicePopUP = () => {
     setServicePopUpState(false);
   };
@@ -65,25 +61,17 @@ const handleAcceptservicePopup =()=>{
   const [messageData, setMessageData] = useState([
 
   ]);
-
   const [PropData, setPropData] = useState();
-
-
   const getData=async()=>{
     try {
     const response = await axios.get('https://linkablebackend-production-e3d2.up.railway.app/sendoffer', data);
     // console.log("=========>>>>>>>get",response.data);
     const data =await response.data;
     setPropData(data.data)
-// console.log('show me data',data);
-
-    // setGetData(data);
-
   } catch (error) {
     console.error(error);
   }
   }
-
   useEffect(() => {
     getData()
     // socket.current = socketIOClient('http://localhost:5000');

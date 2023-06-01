@@ -29,6 +29,12 @@ const SelectOfferPopUP = (props) => {
     revisions: '',
     services: '',
   })
+  useEffect(() => {
+    const storedData = localStorage.getItem("apiData");
+    if (storedData){
+      setGetData(JSON.parse(storedData));
+    }
+  }, []);
 
   const [data, SetData] = useState('')
   const handleOptionChange = (event) => {
@@ -43,19 +49,23 @@ const SelectOfferPopUP = (props) => {
       const response = await axios.post('https://linkablebackend-production-e3d2.up.railway.app/sendoffer', data);
       console.log("=========>>>>>>>POst", response.data);
 
+        // Reload the page
+        window.location.reload();
     } catch (error) {
       console.error(error);
     }
     try {
       const response = await axios.get('https://linkablebackend-production-e3d2.up.railway.app/sendoffer', data);
-      console.log("=========>>>>>>>get",response.data);
+      // console.log("=========>>>>>>>get",response.data);
       const data = response.data;
+        console.log(data);
       setGetData(data);
 
     } catch (error) {
       console.error(error);
     }
   };
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = {
