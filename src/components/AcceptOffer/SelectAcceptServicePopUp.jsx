@@ -26,6 +26,13 @@ const SelectAcceptServicePopUp = ( {PropData,Acceptoffer,handleAcceptservicePopu
               <h3>Me</h3>
               <p className="infoparagrapgh">jun 03 ,4:30PM  </p>
             </div>
+            <div className="select-service-cross-icon">
+              <img
+                src={cross3}
+                alt="cross icon"
+                onClick={handleAcceptservicePopup}
+              />
+            </div>
           </div>
           <div className="card">
             <div className="card1">
@@ -55,7 +62,8 @@ const SelectAcceptServicePopUp = ( {PropData,Acceptoffer,handleAcceptservicePopu
                 <button className="vieworderbtn">
                   view order
                 </button>
-                <button className="Acceptofferbtn">
+                <button className="Acceptofferbtn" onClick={handleAcceptservicePopup}> 
+              
                   offer  Accepted
                 </button>
               </div>
