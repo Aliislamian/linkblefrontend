@@ -62,7 +62,7 @@ console.log(PropData && PropData._id,"prop data");
               <h1 className="card3h1">Your offer include</h1>
               <div className="spandiv">
                 <img className="spanimage" src={greenclock} alt="" />
-                <span className="card3span">{PropData && PropData.revisions} time revision</span>
+                <span className="card3span">{PropData && PropData.revisions}time revision</span>
                 <img className="spanimage" src={greenclock} alt="" />
                 <span className="card3span">{PropData && PropData.delivery_time} day delivery</span>
                 <img className="spanimage" src={tickGreen} alt="" />

@@ -78,7 +78,6 @@ const SelectOfferPopUP = (props) => {
       services: post.services
     };
     sendDataToDatabase(data);
-    window.location.reload();
   };
   const updateData = () => {
     const newData = getData
