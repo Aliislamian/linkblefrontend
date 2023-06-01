@@ -229,13 +229,14 @@
   font-family: "Roboto";
   white-space: wrap;
   text-transform: capitalize;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
 }
 .receiver_designation_text_css {
   display: flex;
   flex-wrap: wrap;
   color: #919191;
   font-family: "Roboto";
+  padding-bottom: 10px;
 }
 .chat_box_with_profile_details_main {
   display: flex;

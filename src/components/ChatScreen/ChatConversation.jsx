@@ -19,8 +19,9 @@ import newRequest, { baseURL } from "../../utils/newRequest";
 import socketIOClient from 'socket.io-client';
 import axios from "axios";
 
-const ChatConversation = (props, username) => {
-    // console.log(data)
+const ChatConversation = (props) => {
+    console.log("chatcanvarsation",props.user)
+
   const [servicePopUpState, setServicePopUpState] = useState(false);
   const [paymentPopUpState, setPaymentPopUpState] = useState(false);
   const [offerPopUpState, setOfferPopUpState] = useState(false);
@@ -218,12 +219,12 @@ const handleAcceptservicePopup =()=>{
 
           <div className="receiver_name_with_designation_main">
      
-          {/* {SenderMessagesData.map((item) => { */ }
+          
                     <div className="receiver_name_text_css">
-                    <p username={username}/>
+                    {props.user && props.user.username}
           </div>
               <div className="receiver_designation_text_css">
-                Professional Mobile App Developer
+              {props.user && props.user.status}
               </div>
           </div>
         </div>
@@ -311,10 +312,10 @@ const handleAcceptservicePopup =()=>{
             <div className="profiler_details_at_left_chat_screen_img">
               <img src={Picture} alt="profile" />
             </div>
-            {/* {chatListData.chatlist.map((item) => {
-              console.log("item======>>", item);
-                return (  
-                  <> */}
+            <div>
+              <p>{props.user && props.user.username}</p>
+            </div>
+
                 <div className="profiler_details_at_left_chat_screen_bio_container">
                       <span style={{ marginLeft: "5px" }}> (level 2)</span>{" "}
                   <span style={{ marginLeft: "10px" }}>
@@ -329,14 +330,14 @@ const handleAcceptservicePopup =()=>{
                   );
                 })} */}
             <div className="profiler_details_at_left_title">
-              Professional Mobile App Developer
+            {props.user && props.user.status}
             </div>
             <div className="profiler_details_at_left_location">
               <div className="profiler_details_at_left_location_icon">
                 <img src={locationicon} alt="location icon" />
               </div>
               <div className="profiler_details_at_left_location_text">
-                New York United States{" "}
+              {props.user && props.user.location}{" "}
               </div>
 
             </div>
