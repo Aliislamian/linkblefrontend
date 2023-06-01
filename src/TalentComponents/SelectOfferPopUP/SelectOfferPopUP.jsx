@@ -68,7 +68,6 @@ const SelectOfferPopUP = (props) => {
       console.error(error);
     }
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = {
@@ -79,6 +78,7 @@ const SelectOfferPopUP = (props) => {
       services: post.services
     };
     sendDataToDatabase(data);
+    window.location.reload();
   };
   const updateData = () => {
     const newData = getData
@@ -290,7 +290,7 @@ const SelectOfferPopUP = (props) => {
             <div className="select-offer-btn-container">
               {data && <CustomOffer data={getData} />}
               <SelectAcceptServicePopUp data={getData} />
-              <button type="submit" className="bg-[#47966B] hover:bg-[#47966B] text-white font-bold py-2 px-4 rounded">
+              <button type="submit" className="bg-[#47966B] hover:bg-[#47966B] text-white font-bold py-2 px-4 rounded" >
                 Submit
               </button>
             </div>

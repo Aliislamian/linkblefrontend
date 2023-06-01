@@ -28,9 +28,10 @@ console.log(PropData && PropData._id,"prop data");
   }
 
   useEffect(()=>{
-          // console.log("fuckkkkkkkkkkkk")
           getData2()
         },[])
+
+        
   return (
     <>
       <Dialog
@@ -49,25 +50,23 @@ console.log(PropData && PropData._id,"prop data");
           </div>
           <div className="card">
             <div className="card1">
-              <h1 className="card1h1">i will write seo optimized content</h1>
-              <span className="card1span">$ 40</span>
+              <h1 className="card1h1">Budget</h1>
+              <span className="card1span">$ {PropData && PropData.budget}</span>
             </div>
             <hr />
             <div className="card2">
-              <p className="card2p">{PropData && PropData._id}</p>
-              <p className="card2p">{PropData && PropData.budget}</p>
-              
+              <p className="card2p">{PropData && PropData.description}</p>              
             </div>
             <hr />
             <div className="card3">
               <h1 className="card3h1">Your offer include</h1>
               <div className="spandiv">
                 <img className="spanimage" src={greenclock} alt="" />
-                <span className="card3span">2 day revision</span>
+                <span className="card3span">{PropData && PropData.revisions} time revision</span>
                 <img className="spanimage" src={greenclock} alt="" />
-                <span className="card3span">2 day delivery</span>
+                <span className="card3span">{PropData && PropData.delivery_time} day delivery</span>
                 <img className="spanimage" src={tickGreen} alt="" />
-                <span className="card3span">Service</span>
+                <span className="card3span">{PropData && PropData.services}</span>
               </div>
             </div>
             <hr />
