@@ -23,7 +23,6 @@ const ChatList = ({ onUserSelect, username }) => {
   // };
 
   useEffect(() => {
-    console.log("soiw me dataa");
     const fetchChatList = async () => {
       try {
         const res = await newRequest.get("/get-chatlist");

@@ -20,7 +20,6 @@ import socketIOClient from 'socket.io-client';
 import axios from "axios";
 
 const ChatConversation = (props) => {
-    console.log("chatcanvarsation",props.user)
 
   const [servicePopUpState, setServicePopUpState] = useState(false);
   const [paymentPopUpState, setPaymentPopUpState] = useState(false);

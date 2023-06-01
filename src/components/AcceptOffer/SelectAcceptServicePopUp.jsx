@@ -11,27 +11,6 @@ import greenclock from "../../images/greenclock.png"
 import axios from "axios";
 
 const SelectAcceptServicePopUp = ( {PropData,Acceptoffer,handleAcceptservicePopup} ) => {
-// let {_id,description}=PropData
-console.log(PropData && PropData._id,"prop data");
-
-  const getData2=async()=>{
-    try {
-    const response = await axios.get('https://linkablebackend-production-e3d2.up.railway.app/sendoffer');
-    // console.log("=========>>>>>>>get",response.data);
-    const data =await response.data;
-// console.log('show me data',data);
-    // setGetData(data);
-
-  } catch (error) {
-    console.error(error);
-  }
-  }
-
-  useEffect(()=>{
-          getData2()
-        },[])
-
-        
   return (
     <>
       <Dialog
