@@ -23,7 +23,8 @@ const ChatConversation = (props) => {
   const [servicePopUpState, setServicePopUpState] = useState(false);
   const [paymentPopUpState, setPaymentPopUpState] = useState(false);
   const [offerPopUpState, setOfferPopUpState] = useState(false);
-  const [Acceptoffer ,  setAcceptoffer] =useState(false)
+  const [Acceptoffer ,  setAcceptoffer]=useState(false)
+  
   const handleServicePopUP = () => {
     setServicePopUpState(false);
   };
