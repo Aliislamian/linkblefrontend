@@ -7,8 +7,10 @@ import Picture2 from "../../images/tabprofileimg2.png";
 import Picture3 from "../../images/tabprofileimg3.png";
 import Picture4 from "../../images/circularprofile.png";
 import { StarBorder } from "@material-ui/icons";
+import { useState } from "react";
 
 const ChatList = () => {
+
   const SenderMessagesData = [
     {
       profileImage: Picture,

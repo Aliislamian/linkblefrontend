@@ -27,8 +27,9 @@ const ChatList = ({ onUserSelect, username }) => {
       try {
         const res = await newRequest.get("/get-chatlist");
         setChatListData(res.data.data);
+        console.log("jahdkjahskd",setChatListData(res.data.data))
       } catch (error) {
-        console.log(error);
+        console.log("error",error);
       }
     };
     fetchChatList();

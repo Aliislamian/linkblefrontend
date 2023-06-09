@@ -51,10 +51,12 @@ const handleAcceptservicePopup =()=>{
 
   // creatae state to get the currentUser from local storage if it exists or else set it to null
   const [currentUser, setCurrentUser] = useState(
-    // JSON.parse(localStorage.getItem("currentUser"))
+    JSON.parse(localStorage.getItem("currentUser"))
 
 
   );
+
+  console.log("currentUser", currentUser);
 
   const socket = useRef();
 
@@ -149,7 +151,7 @@ const handleAcceptservicePopup =()=>{
       };
 
       socket.current.emit('chatMessage', message, (response) => {
-        console.log(response);
+        console.log("response", response);
         if (response && response.success) {
           // setMessageData((prev) => [...prev, response.message]);
         }
