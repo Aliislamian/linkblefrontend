@@ -147,6 +147,7 @@ const handleAcceptservicePopup =()=>{
       const message = {
         text: messageText,
         to: props.user && props.user._id,
+        
         sender: { _id: currentUser._id }
       };
 
