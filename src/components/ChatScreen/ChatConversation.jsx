@@ -19,15 +19,19 @@ import newRequest, { baseURL } from "../../utils/newRequest";
 import socketIOClient from 'socket.io-client';
 import axios from "axios";
 
-const ChatConversation = (props) => {
-  const [servicePopUpState, setServicePopUpState] = useState(false);
+const ChatConversation = ({ show, ...props }) => {
+  console.log("showshowshowshow", show);
+
+  // const [servicePopUpState, setServicePopUpState] = useState(false);
   const [paymentPopUpState, setPaymentPopUpState] = useState(false);
   const [offerPopUpState, setOfferPopUpState] = useState(false);
   const [Acceptoffer ,  setAcceptoffer]=useState(false)
+
+
   
-  const handleServicePopUP = () => {
-    setServicePopUpState(false);
-  };
+  // const handleServicePopUP = () => {
+  //   setServicePopUpState(false);
+  // };
 const handleAcceptservicePopup =()=>{
   setAcceptoffer(false)
 }
@@ -38,13 +42,12 @@ const handleAcceptservicePopup =()=>{
     setOfferPopUpState(false);
   };
   const HandleServiceSelection = () => {
-    setServicePopUpState(false);
   setAcceptoffer(false)
     setPaymentPopUpState(true);
   };
   
   const handelCreatePaymetOffer = () => {
-    setServicePopUpState(false);
+    // setServicePopUpState(false);
     setPaymentPopUpState(false);
     setOfferPopUpState(true);
   };
@@ -83,7 +86,7 @@ const handleAcceptservicePopup =()=>{
         if (prev.some((msg) => msg._id === message._id)) {
           return prev;
         } else {
-          
+
           return [...prev, message];
         }
       });
@@ -179,8 +182,8 @@ const handleAcceptservicePopup =()=>{
    <div className="chat_conversation_main_div">
 
     <SelectServicePopUp
-        servicePopUpState={servicePopUpState}
-        handleServicePopUP={handleServicePopUP}
+        // servicePopUpState={servicePopUpState}
+        // handleServicePopUP={handleServicePopUP}
         HandleServiceSelection={HandleServiceSelection}
       />
       <SelectAcceptServicePopUp
@@ -218,6 +221,7 @@ const handleAcceptservicePopup =()=>{
               </div>
           </div>
         </div>
+        {show &&
         <div
             className="sent-offer-btn"
             onClick={() => {
@@ -225,9 +229,9 @@ const handleAcceptservicePopup =()=>{
               setAcceptoffer(true);
             }}
           >
-            Accept Offer
+              Accept Offer 
           </div>
-
+}
         <div className="chat_box_header_icons_container">
           <div className="chat_box_header_icons">
             <img src={designedDeleteIcon} alt="delete icon" />
@@ -281,6 +285,7 @@ const handleAcceptservicePopup =()=>{
               placeholder="Type a message..."
               ref={inputRef}
             />
+             {/* {show &&
             <div
             className="sent-offer-btn"
             onClick={() => {
@@ -289,6 +294,7 @@ const handleAcceptservicePopup =()=>{
           >
             Send Offer
           </div>
+} */}
             <button type="submit" className="sent-text-icon">
               <img src={sentTextIcon} alt="sent icon" />
             </button>

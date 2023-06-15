@@ -6,11 +6,19 @@ import ChatConversation from "./ChatConversation";
 import { useRef } from "react";
 import SelectOfferPopUP from "../../TalentComponents/SelectOfferPopUP/SelectOfferPopUP";
 
-const ChatScreen = () => {
+const ChatScreen = (props) => {
   const navRef = useRef();
   const [selectedUser, setSelectedUser] = useState(null);
+  const [show , setShow] = useState(false);
+
   const handleUserSelect = (user) => {
     setSelectedUser(user);
+  };
+
+  const handleButtonClick = () => {
+    setShow(true)
+    console.log("setShow",show);
+
   };
 
   return (
@@ -27,10 +35,10 @@ const ChatScreen = () => {
         }}
       >
         <div className="chat_screen_chat_list_comp_div_main">
-          <ChatList onUserSelect={handleUserSelect} />
+          <ChatList onUserSelect={handleUserSelect} handleButtonClick={handleButtonClick} />
         </div>
         <div className="chat_screen_chat_conversation_comp_div_main">
-          <ChatConversation user={selectedUser} />
+          <ChatConversation user={selectedUser} show={show} />
         </div>
         <div className="chat_screen_chat_conversation_comp_div_main">
           <SelectOfferPopUP user={selectedUser} />

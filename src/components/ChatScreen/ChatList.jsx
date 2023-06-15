@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import newRequest from "../../utils/newRequest";
 import ChatConversation from "./ChatConversation";
 
-const ChatList = ({ onUserSelect, username }) => {
+const ChatList = ({ onUserSelect, username, handleButtonClick  }) => {
 
   const [chatListData, setChatListData] = useState({ chatlist: [], groupChatlist: [] });
   // const [formData, setFormData] = useState([]);
@@ -37,6 +37,7 @@ const ChatList = ({ onUserSelect, username }) => {
 
   const handleUserClick = (user) => {
     onUserSelect(user);
+    
   };
   const SenderMessagesData = [
     {
@@ -133,7 +134,7 @@ const ChatList = ({ onUserSelect, username }) => {
           return (
             <div className="buyer_chat_first_profile_main"
               onClick={() => handleUserClick(item)}
-
+              
             >
               <div className="profile_picture_div_main">
                 <img
@@ -146,7 +147,7 @@ const ChatList = ({ onUserSelect, username }) => {
                 <div className="profiler_name_with_time_n_fvrt_icon_main">
                   <div className="profiler_name_with_online_status">
                     <div className="Profiler_name_text" 
-                    // onClick={handleClick}
+                    onClick={handleButtonClick}
                     >
                       {item.username}
                     {/* <ChatConversation data={formData} /> */}
@@ -167,7 +168,10 @@ const ChatList = ({ onUserSelect, username }) => {
                   </div>
                 </div>
                 {/* <div className="chat_sender_msg_css">{item.message}</div> */}
-                <div className="chat_sender_msg_css">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid consecteture</div>
+                  <div className="chat_sender_msg_css">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid consecteture</div>
+                
+              
               </div>
             </div>
           );

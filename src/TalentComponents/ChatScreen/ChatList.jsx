@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../ChatScreen/ChatScreen.css";
 import SearchIcon from "../../images/search.png";
 import Picture from "../../images/profilepic.png";
@@ -7,10 +7,38 @@ import Picture2 from "../../images/tabprofileimg2.png";
 import Picture3 from "../../images/tabprofileimg3.png";
 import Picture4 from "../../images/circularprofile.png";
 import { StarBorder } from "@material-ui/icons";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import newRequest from "../../utils/newRequest";
+import ChatConversation from "./ChatConversation";
 
-const ChatList = () => {
+const ChatList = ({ onUserSelect, username, handleButtonClick  }) => {
 
+  const [chatListData, setChatListData] = useState({ chatlist: [], groupChatlist: [] });
+  // const [formData, setFormData] = useState([]);
+  // const handleClick = () => {
+  //   const newFormData = [...formData, formData ]; // Add new data to the existing data array
+  //   setFormData(newFormData); // Update the state with the new data
+  // console.log("formData=========>>>>>>>", setFormData)
+
+  // };
+
+  useEffect(() => {
+    const fetchChatList = async () => {
+      try {
+        const res = await newRequest.get("/get-chatlist");
+        setChatListData(res.data.data);
+        console.log("jahdkjahskd",setChatListData(res.data.data))
+      } catch (error) {
+        console.log("error",error);
+      }
+    };
+    fetchChatList();
+  }, []);
+
+  const handleUserClick = (user) => {
+    onUserSelect(user);
+    
+  };
   const SenderMessagesData = [
     {
       profileImage: Picture,
@@ -21,7 +49,7 @@ const ChatList = () => {
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid consectetur voluptates quos ullam fuga inventore unde voluptate deserunt commodi accusantium. Animi quis recusandae, hic repellendus nulla voluptate nisi exercitationem. Voluptate?",
     },
     {
-      profileImage: Picture2,
+      profileImage: Picture1,
       profiler_name: "Thor Oden",
       favourite: "true",
       msg_received_time: "07:12 PM",
@@ -29,7 +57,7 @@ const ChatList = () => {
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid consectetur voluptates quos ullam fuga inventore unde voluptate deserunt commodi accusantium. Animi quis recusandae, hic repellendus nulla voluptate nisi exercitationem. Voluptate?",
     },
     {
-      profileImage: Picture3,
+      profileImage: Picture2,
       profiler_name: "Martin",
       favourite: "true",
       msg_received_time: "yesterday",
@@ -77,12 +105,16 @@ const ChatList = () => {
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid consectetur voluptates quos ullam fuga inventore unde voluptate deserunt commodi accusantium. Animi quis recusandae, hic repellendus nulla voluptate nisi exercitationem. Voluptate?",
     },
   ];
+  const navigate = useNavigate();
 
   return (
     <div className="buyer_chat_list_main">
       <div className="buyer_allChat_n_group_chat_div_main">
         <div className="buyer_All_chat">All chat</div>
-        <div className="buyer_create_grp_chat_div">
+        <div
+          className="buyer_create_grp_chat_div"
+          onClick={() => navigate("/buyerhome")}
+        >
           <span className="grp_chat_pls_symbol">+</span>Create Group Chat
         </div>
       </div>
@@ -97,12 +129,16 @@ const ChatList = () => {
         />
       </div>
       <div className="profiles_Chat_list_main">
-        {SenderMessagesData.map((item) => {
+        {chatListData.chatlist.map((item) => {
+          {/* {SenderMessagesData.map((item) => { */ }
           return (
-            <div className="buyer_chat_first_profile_main">
+            <div className="buyer_chat_first_profile_main"
+              onClick={() => handleUserClick(item)}
+              
+            >
               <div className="profile_picture_div_main">
                 <img
-                  src={item.profileImage}
+                  src={item.profileImg !== "" ? item.profileImg : Picture}
                   alt="img"
                   className="profilePicute_css_for_chat"
                 />
@@ -110,8 +146,11 @@ const ChatList = () => {
               <div className="profiler_name_n_msg_main">
                 <div className="profiler_name_with_time_n_fvrt_icon_main">
                   <div className="profiler_name_with_online_status">
-                    <div className="Profiler_name_text">
-                      {item.profiler_name}
+                    <div className="Profiler_name_text" 
+                    onClick={handleButtonClick}
+                    >
+                      {item.username}
+                    {/* <ChatConversation data={formData} /> */}
                     </div>
                     <div className="chat_online_status"></div>
                   </div>
@@ -124,10 +163,15 @@ const ChatList = () => {
                         />
                       </div>
                     )}
-                    <div className="time_css">{item.msg_received_time}</div>
+                    {/* <div className="time_css">{item.msg_received_time}</div> */}
+                    <div className="time_css">10:22 PM</div>
                   </div>
                 </div>
-                <div className="chat_sender_msg_css">{item.message}</div>
+                {/* <div className="chat_sender_msg_css">{item.message}</div> */}
+                  <div className="chat_sender_msg_css">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid consecteture</div>
+                
+              
               </div>
             </div>
           );
