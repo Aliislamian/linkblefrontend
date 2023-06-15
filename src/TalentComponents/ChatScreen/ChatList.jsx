@@ -115,7 +115,7 @@ const ChatList = ({ onUserSelect, username, handleButtonClick  }) => {
           className="buyer_create_grp_chat_div"
           onClick={() => navigate("/buyerhome")}
         >
-          <span className="grp_chat_pls_symbol">+</span>Create Group Chat
+         
         </div>
       </div>
       <div className="buyer_chat_search_bar_div">

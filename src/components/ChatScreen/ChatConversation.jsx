@@ -147,8 +147,9 @@ const handleAcceptservicePopup =()=>{
 
     if (messageText.length !== 0) {
       const message = {
-        text: messageText,
-        to: props.user && props.user._id,
+        text: props.user && props.user._id ,
+        
+        to: messageText ,
         
         sender: { _id: currentUser._id }
       };
@@ -170,12 +171,14 @@ const handleAcceptservicePopup =()=>{
   };
 
   const determineClassAndImage = (data) => {
-    if (data.sender === (props.user && props.user._id)) {
-      return { class: 'personTwo message_text_container', img: null };  // You can replace null with the logged-in user's image if available
+    if (data.sender === currentUser._id) {
+      return { class: 'personOne message_text_container', img: defaultImage };
     } else {
-      return { class: 'personOne message_text_container', img: null };  // You can replace null with the other user's image if available
+      return { class: 'personTwo message_text_container', img: Picture };
     }
   };
+  
+  
 
   return (
 <>
