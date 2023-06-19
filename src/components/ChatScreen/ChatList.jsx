@@ -130,9 +130,11 @@ const ChatList = ({ onUserSelect, username, handleButtonClick  }) => {
       </div>
       <div className="profiles_Chat_list_main">
         {chatListData.chatlist.map((item) => {
+
           {/* {SenderMessagesData.map((item) => { */ }
           return (
             <div className="buyer_chat_first_profile_main"
+
               onClick={() => handleUserClick(item)}
               
             >

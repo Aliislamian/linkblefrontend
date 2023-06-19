@@ -147,9 +147,10 @@ const handleAcceptservicePopup =()=>{
 
     if (messageText.length !== 0) {
       const message = {
-        text: props.user && props.user._id ,
+        text:  messageText ,
         
-        to: messageText ,
+        to: props.user && props.user._id, 
+        
         
         sender: { _id: currentUser._id }
       };
@@ -172,11 +173,12 @@ const handleAcceptservicePopup =()=>{
 
   const determineClassAndImage = (data) => {
     if (data.sender === currentUser._id) {
-      return { class: 'personOne message_text_container', img: defaultImage };
-    } else {
       return { class: 'personTwo message_text_container', img: Picture };
+    } else {
+      return { class: 'personOne message_text_container', img: defaultImage };
     }
   };
+  
   
   
 

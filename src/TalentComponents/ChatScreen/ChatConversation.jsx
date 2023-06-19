@@ -171,12 +171,13 @@ const ChatConversation = ({ show, ...props }) => {
   };
 
   const determineClassAndImage = (data) => {
-    if (data.sender === (props.user && props.user._id)) {
-      return { class: 'personTwo message_text_container', img: null };  // You can replace null with the logged-in user's image if available
+    if (data.sender === currentUser._id) {
+      return { class: 'personTwo message_text_container', img: Picture };
     } else {
-      return { class: 'personOne message_text_container', img: null };  // You can replace null with the other user's image if available
+      return { class: 'personOne message_text_container', img: defaultImage };
     }
   };
+  
 
   return (
 <>
@@ -287,14 +288,13 @@ const ChatConversation = ({ show, ...props }) => {
               ref={inputRef}
             />
              {show &&
-            <div
-            className="sent-offer-btn"
-            onClick={() => {
-              setServicePopUpState(true);
-            }}
-          >
+          <button
+          onClick={() => {
+            setServicePopUpState(true);
+          }}
+           className="bg-[#47966B] hover:bg-[#70C191] text-white font-bold py-0 px-4 rounded">
             Send Offer
-          </div>
+        </button>
 }
             <button type="submit" className="sent-text-icon">
               <img src={sentTextIcon} alt="sent icon" />
