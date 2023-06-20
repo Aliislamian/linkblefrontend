@@ -27,7 +27,6 @@ const ChatList = ({ onUserSelect, username, handleButtonClick  }) => {
       try {
         const res = await newRequest.get("/get-chatlist");
         setChatListData(res.data.data);
-        console.log("jahdkjahskd",setChatListData(res.data.data))
       } catch (error) {
         console.log("error",error);
       }
@@ -37,7 +36,8 @@ const ChatList = ({ onUserSelect, username, handleButtonClick  }) => {
 
   const handleUserClick = (user) => {
     onUserSelect(user);
-    
+    console.log("onUserSelect(user)", onUserSelect(user));    
+    console.log("setChatListData", chatListData);    
   };
   const SenderMessagesData = [
     {

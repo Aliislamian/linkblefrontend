@@ -50,8 +50,8 @@ const PaymnetComponent = () => {
         if (!selectedPlan || !selectedPlanName) {
             navigate(-1);
         }
-        console.log(selectedPlan);
-        console.log(selectedPlanName);
+        console.log("selectedPlan", selectedPlan);
+        console.log("selectedPlanName", selectedPlanName);
 
 
         const makeRequest = async () => {
@@ -70,6 +70,7 @@ const PaymnetComponent = () => {
                         subcategory: selectedPlan.subcategory,
                     }
                 );
+                console.log("resresresresresresres=========>>>>>>>", res);
                 setClientSecret(res.data.clientSecret);
                 console.log(res.data.orderId);
                 let orderId = res.data.orderId;

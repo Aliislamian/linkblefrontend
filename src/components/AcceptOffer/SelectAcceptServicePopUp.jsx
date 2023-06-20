@@ -9,8 +9,12 @@ import tickGreen from "../../images/tickGreen.png"
 import orderUpdate from "../../images/orderUpdate.png"
 import greenclock from "../../images/greenclock.png"
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 
 const SelectAcceptServicePopUp = ( {PropData,Acceptoffer,handleAcceptservicePopup} ) => {
+  const navigate = useNavigate();
+
   return (
     <>
       <Dialog
@@ -62,8 +66,13 @@ const SelectAcceptServicePopUp = ( {PropData,Acceptoffer,handleAcceptservicePopu
                 <button className="vieworderbtn">
                   view order
                 </button>
-                <button className="Acceptofferbtn" onClick={handleAcceptservicePopup}> 
-              
+                <button className="Acceptofferbtn" onClick={() => {
+                  // navigate("/payment-page");
+                  navigate("/stripe-pay");
+
+                }}
+                > 
+
                   offer  Accepted
                 </button>
               </div>
