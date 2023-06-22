@@ -12,7 +12,6 @@ import sentTextIcon from "../../images/sentTextIcon.png";
 import SelectPaymentPopUp from "../../TalentComponents/SelectPaymentPopUp/SelectPaymentPopUp";
 import SelectServicePopUp from "../../TalentComponents/SelectServicePopUp/SelectServicePopUp";
 import SelectOfferPopUP from "../../TalentComponents/SelectOfferPopUP/SelectOfferPopUP";
-import SelectAcceptServicePopUp from "../../components/AcceptOffer/SelectAcceptServicePopUp";
 
 
 import { StarBorder } from "@material-ui/icons";
@@ -31,7 +30,9 @@ const ChatConversation = ({ show, ...props }) => {
 
   
   const handleServicePopUP = () => {
+    const userId = props.user && props.user._id;
     setServicePopUpState(false);
+    console.log("User ID:", userId);
   };
 // const handleAcceptservicePopup =()=>{
 //   setAcceptoffer(false)
@@ -57,7 +58,6 @@ const ChatConversation = ({ show, ...props }) => {
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(localStorage.getItem("currentUser"))
   );
-
   console.log("currentUser", currentUser);
 
   const socket = useRef();
@@ -105,6 +105,7 @@ const ChatConversation = ({ show, ...props }) => {
       try {
         const res = await newRequest.get(`/get-messages?to=${props.user && props.user._id}`);
         setMessageData(res.data && res.data.messages);
+        console.log("setMessageData(res.data && res.data.messages)", setMessageData(res.data && res.data.messages));
       } catch (error) {
         console.log(error);
       }
@@ -154,6 +155,12 @@ const ChatConversation = ({ show, ...props }) => {
         
         sender: { _id: currentUser._id }
       };
+
+      if (show) {
+        // Save the user ID here
+        const userId = props.user && props.user._id;
+        console.log("User ID:", userId);
+      }
 
       socket.current.emit('chatMessage', message, (response) => {
         console.log("response", response);
