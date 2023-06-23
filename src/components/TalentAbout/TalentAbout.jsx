@@ -60,7 +60,7 @@ const TalentAbout = () => {
   const handleChooseClick = (data, planName) => {
 
     // append plan name to data
-    console.log(data)
+    console.log("data-=-=-=-=-=-=-=-=-=",data)
 
     // save data in session storage
 

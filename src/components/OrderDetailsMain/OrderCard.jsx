@@ -22,28 +22,35 @@ const OrderCard = ({
   groupChatState,
   orderState,
   OrderCardNavigation,
-}) => {
+}, ...props) => {
   const navigate = useNavigate();
+
   const [width, setWidth] = useState(window.innerWidth);
   const [checkBoxState, setCheckBoxState] = useState(false);
   const [overlay, setOverlay] = useState(false);
   const [orderData, setOrderData] = useState(null); // State to store the fetched order data
 
   // const [groupChatState, setGroupChatState] = useState(false);
-    
+      console.log("============orderdata", props.orderData);
   // Fetch order data when the component mounts
   useEffect(() => {
     const fetchOrderData = async () => {
       try {
         const response = await axios.get(
-          'https://linkablebackend-production-e3d2.up.railway.app/buyer/get-all-orders'
+          'https://linkablebackend-production-e3d2.up.railway.app/buyer/get-one-order/64957b0654fafddb751e16d8',
+          {
+            headers: {
+              Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDU5NTJlNGM4OGMxMjY2NTE4MGM1NzUiLCJlbWFpbCI6ImJ1eWVyQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiYnV5ZXIxMjMiLCJwcm9maWxlSW1nIjoiIiwibG9jYXRpb24iOiJQYWtpc3RhbiIsInN0YXR1cyI6ImNsaWVudCBzYXRpc2ZpY3Rpb24gaXMgbXkgbWFpbiBtb3RvIiwiY2hhdGxpc3RJZCI6IjY0NTk1MmUzYzg4YzEyNjY1MTgwYzU3MSIsImdyb3VwQ2hhdExpc3RJZCI6IjY0NTk1MmUzYzg4YzEyNjY1MTgwYzU3MyIsImZhdm91cml0ZUdpZ3MiOltdLCJjcmVhdGVkQXQiOiIyMDIzLTA1LTA4VDE5OjUyOjA0LjAyMloiLCJ1cGRhdGVkQXQiOiIyMDIzLTA1LTA4VDE5OjUyOjA0LjAyMloiLCJpYXQiOjE2ODc1MTQ2MTQsImV4cCI6MTY5MDEwNjYxNH0.YJts6oZd-KV2XY1EY8x2RsIHQfpZf8dFX4bq1CC29fM',
+            },
+          }
         );
-        setOrderData(response.data); // Store the fetched order data in state
-      console.log("setOrderData(response.data)", setOrderData(response.data));
+        setOrderData(response.data);
+        console.log("setOrderData(response.data)", response.data);
       } catch (error) {
         console.error(error);
       }
     };
+    
 
     fetchOrderData();
 
@@ -73,6 +80,8 @@ const OrderCard = ({
 
   const handleOrderDetailsClick = () => {
     console.log("Order Details Clicked:", orderData);
+      
+      console.log("{orderData && orderData.data.username}", orderData.data.buyerId.username);
     navigate(OrderCardNavigation);
   };
 
@@ -101,17 +110,22 @@ const OrderCard = ({
 
     />
   </div>
+  {orderData && orderData.data && orderData.data.buyerId && (
+
   <div className="order_name_country_details_div">
-    <text
-      className="order-card-heading"
-      style={{
-        fontSize: "large",
-        fontWeight: "bold",
-        color: "white",
-      }}
-    >
-      {ProfilerName}
-    </text>
+
+  <text
+    className="order-card-heading"
+    style={{
+      fontSize: "large",
+      fontWeight: "bold",
+      color: "white",
+    }}
+    onClick={handleOrderDetailsClick}
+  >
+    {orderData.data.buyerId.username}
+  </text>
+
     <text
       className="order-card-text"
       style={{
@@ -121,15 +135,19 @@ const OrderCard = ({
         paddingBottom: "4px",
       }}
     >
-      {ProfilerCountry}
+          {orderData.data.buyerId.location}
+
     </text>
     <text
       style={{ color: "white", fontSize: "small" }}
       className="order-card-text"
     >
-      Check Order Details
+        {orderData.data.buyerId.status}
+
     </text>
   </div>
+)}
+
 </div>
 {mobile === 0 && (
   <div className="order_budget_main_div">

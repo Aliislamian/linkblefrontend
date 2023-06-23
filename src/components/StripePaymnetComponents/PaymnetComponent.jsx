@@ -7,15 +7,17 @@ import CheckoutForm from "./CheckoutForm";
 import newRequest from "../../utils/newRequest";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../MyNav/Navbar";
+import OrderCard from "../OrderDetailsMain/OrderCard";
 
 
 const stripePromise = loadStripe(
     "pk_test_51Mx2FxDbLFHi3ZvJawX1KLUeeyAS7Ng4yuAsJzvAuqCMYVYHzMkh1jjzCbQeLPwXiwP3tB3BfYQ6auOWTY3ApP6l00fIyLwOpO"
 );
 
-const PaymnetComponent = () => {
+const PaymnetComponent = (props) => {
     const navRef = useRef();
     const [clientSecret, setClientSecret] = useState("");
+    const [orderData, setOrderData] = useState("");
     const navigate = useNavigate();
     const [selectedPlan, setSelectedPlan] = useState(() => {
         const storedPlan = JSON.parse(sessionStorage.getItem('selectedPlan'));
@@ -28,7 +30,7 @@ const PaymnetComponent = () => {
     });
     const [deliveryDate, setDeliveryDate] = useState("");
 
-    useEffect(() => {
+    useEffect(() => { 
         function getFutureDate(deliveryDays) {
             const currentDate = new Date();
             currentDate.setDate(currentDate.getDate() + deliveryDays);
@@ -71,6 +73,7 @@ const PaymnetComponent = () => {
                     }
                 );
                 console.log("resresresresresresres=========>>>>>>>", res);
+                setOrderData(res)
                 setClientSecret(res.data.clientSecret);
                 console.log(res.data.orderId);
                 let orderId = res.data.orderId;
@@ -84,6 +87,7 @@ const PaymnetComponent = () => {
 
     }, [selectedPlan, selectedPlanName]);
 
+    console.log("orderDataorderDataorderDataorderData", orderData);
 
     const appearance = {
         theme: 'stripe',
@@ -108,7 +112,11 @@ const PaymnetComponent = () => {
                     </Elements>
                 )}
             </div >;
+                    
+             {orderData && <OrderCard orderData={orderData} />}
+                    
         </>)
+
 };
 
 export default PaymnetComponent;
