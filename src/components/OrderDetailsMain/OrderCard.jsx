@@ -22,7 +22,8 @@ const OrderCard = ({
   groupChatState,
   orderState,
   OrderCardNavigation,
-}, ...props) => {
+  orderDatas
+}) => {
   const navigate = useNavigate();
 
   const [width, setWidth] = useState(window.innerWidth);
@@ -31,7 +32,7 @@ const OrderCard = ({
   const [orderData, setOrderData] = useState(null); // State to store the fetched order data
 
   // const [groupChatState, setGroupChatState] = useState(false);
-      console.log("============orderdata", props.orderData);
+      console.log("============orderdata", orderDatas);
   // Fetch order data when the component mounts
   useEffect(() => {
     const fetchOrderData = async () => {
@@ -80,8 +81,7 @@ const OrderCard = ({
 
   const handleOrderDetailsClick = () => {
     console.log("Order Details Clicked:", orderData);
-      
-      console.log("{orderData && orderData.data.username}", orderData.data.buyerId.username);
+    console.log("============orderdata", orderDatas);      
     navigate(OrderCardNavigation);
   };
 
