@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../OrderDetailsMain/OrderDetailsMain.css";
 import "../OrderDetailsMain/OrderDetailsMain.css";
 import ClockIcon from "../../images/clockicon.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, } from "react-router-dom";
 import checkBox from "../../images/tickMarkWhite.png";
 import emptyCheckBox from "../../images/Rectangle.png";
 import { display } from "@mui/system";
@@ -22,44 +22,67 @@ const OrderCard = ({
   groupChatState,
   orderState,
   OrderCardNavigation,
-  orderDatas
+  selectedPlans
 }) => {
   const navigate = useNavigate();
 
   const [width, setWidth] = useState(window.innerWidth);
   const [checkBoxState, setCheckBoxState] = useState(false);
   const [overlay, setOverlay] = useState(false);
-  const [orderData, setOrderData] = useState(null); // State to store the fetched order data
+  const [orderData, setOrderData] = useState(null); // State to store the fetched order 
+  
+
+  const [selectedPlan, setSelectedPlan] = useState({});
+
+  useEffect(() => {
+    const storedPlan = JSON.parse(sessionStorage.getItem('selectedPlan'));
+    const initialPlan = storedPlan || {};
+    setSelectedPlan(initialPlan);
+  }, []);
+
+  const [selectedPlanName, setSelectedPlanName] = useState(() => {
+    const storedPlanName = JSON.parse(sessionStorage.getItem('planName'));
+    return storedPlanName || '';
+  });
+    
+  const [deliveryDate, setDeliveryDate] = useState("");
+  useEffect(() => {
+    function getFutureDate(deliveryDays) {
+      const currentDate = new Date();
+      currentDate.setDate(currentDate.getDate() + deliveryDays);
+
+      const options = {
+        weekday: 'short',
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+      };
+      return currentDate.toLocaleDateString('en-US', options);
+    }
+
+    const deliveryDays = selectedPlan && selectedPlan.pricing && selectedPlan.pricing[selectedPlanName] ? selectedPlan.pricing[selectedPlanName].delivery    : 0;
+    const revision = selectedPlan && selectedPlan.pricing && selectedPlan.pricing[selectedPlanName] ? selectedPlan.pricing[selectedPlanName].revisions : 0;
+
+    const futureDate = getFutureDate(deliveryDays);
+    console.log("futureDate......>>>>>>---", deliveryDays);
+    console.log(revision);
+    setDeliveryDate(futureDate);
+    if (!selectedPlan || !selectedPlanName) {
+      navigate(-1);
+    }
+    console.log(selectedPlan);
+    console.log(selectedPlanName);
+  }, [selectedPlan, selectedPlanName]);
+
+  
+  useEffect(() => {
+    console.log("selectedPlanselectedPlanselectedPlan", selectedPlan
+    );
+  }, [selectedPlan]);
 
   // const [groupChatState, setGroupChatState] = useState(false);
-      console.log("============orderdata", orderDatas);
   // Fetch order data when the component mounts
-  useEffect(() => {
-    const fetchOrderData = async () => {
-      try {
-        const response = await axios.get(
-          'https://linkablebackend-production-e3d2.up.railway.app/buyer/get-one-order/64957b0654fafddb751e16d8',
-          {
-            headers: {
-              Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDU5NTJlNGM4OGMxMjY2NTE4MGM1NzUiLCJlbWFpbCI6ImJ1eWVyQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiYnV5ZXIxMjMiLCJwcm9maWxlSW1nIjoiIiwibG9jYXRpb24iOiJQYWtpc3RhbiIsInN0YXR1cyI6ImNsaWVudCBzYXRpc2ZpY3Rpb24gaXMgbXkgbWFpbiBtb3RvIiwiY2hhdGxpc3RJZCI6IjY0NTk1MmUzYzg4YzEyNjY1MTgwYzU3MSIsImdyb3VwQ2hhdExpc3RJZCI6IjY0NTk1MmUzYzg4YzEyNjY1MTgwYzU3MyIsImZhdm91cml0ZUdpZ3MiOltdLCJjcmVhdGVkQXQiOiIyMDIzLTA1LTA4VDE5OjUyOjA0LjAyMloiLCJ1cGRhdGVkQXQiOiIyMDIzLTA1LTA4VDE5OjUyOjA0LjAyMloiLCJpYXQiOjE2ODc1MTQ2MTQsImV4cCI6MTY5MDEwNjYxNH0.YJts6oZd-KV2XY1EY8x2RsIHQfpZf8dFX4bq1CC29fM',
-            },
-          }
-        );
-        setOrderData(response.data);
-        console.log("setOrderData(response.data)", response.data);
-      } catch (error) {
-        console.error(error);
-      }
 
-      
-    };
-    
-
-    fetchOrderData();
-
-    window.addEventListener("resize", updateWidth);
-    return () => window.removeEventListener("resize", updateWidth);
-  }, []);
 
   const updateWidth = () => {
     setWidth(window.innerWidth);
@@ -82,8 +105,8 @@ const OrderCard = ({
   }
 
   const handleOrderDetailsClick = () => {
-    console.log("Order Details Clicked:", orderData);
-    console.log("============orderdata", orderDatas);      
+    console.log("Order Details Clicked:", selectedPlans);
+    console.log("============orderdata", selectedPlans);      
     navigate(OrderCardNavigation);
   };
 
@@ -98,12 +121,14 @@ const OrderCard = ({
       }}
       onClick={handleOrderDetailsClick}
     >
-      
+      {selectedPlan  && selectedPlan.servicesImages && (
 <div className="order_image_div_mainn">
-<img src={OrderImage} alt="image" className="order_image_css" />
+<img src={selectedPlan.servicesImages[0].imgUrl} alt="image" className="order_image_css" />
 </div>
+)}
 <div className="second_order_card_div_main">
 <div className="profile_mainnn">
+  
   <div className="order_profile_image_div">
     <img
       src={ProfileImage}
@@ -112,7 +137,7 @@ const OrderCard = ({
 
     />
   </div>
-  {orderData && orderData.data && orderData.data.buyerId && (
+  {selectedPlan  && selectedPlan.user_id && (
 
   <div className="order_name_country_details_div">
 
@@ -125,7 +150,7 @@ const OrderCard = ({
     }}
     onClick={handleOrderDetailsClick}
   >
-    {orderData.data.buyerId.username}
+    {selectedPlan.user_id.username}
   </text>
 
     <text
@@ -137,14 +162,15 @@ const OrderCard = ({
         paddingBottom: "4px",
       }}
     >
-          {orderData.data.buyerId.location}
+              {selectedPlan.user_id.location}
 
     </text>
     <text
       style={{ color: "white", fontSize: "small" }}
       className="order-card-text"
     >
-        {orderData.data.buyerId.status}
+    {selectedPlan.user_id.status}
+
 
     </text>
   </div>
@@ -161,28 +187,31 @@ const OrderCard = ({
         fontWeight: "bold",
       }}
     >
-      {OrderBudget}
+      $ {selectedPlan && selectedPlan.pricing && selectedPlan.pricing[selectedPlanName] ? selectedPlan.pricing[selectedPlanName].price : 0}
     </text>
     <text
       className="order-card-text order-detail"
       style={{ color: "white", lineHeight: "20px" }}
     >
-      {OrderDetails}
+      {selectedPlan && selectedPlan.pricing && selectedPlan.pricing[selectedPlanName] ? selectedPlan.pricing[selectedPlanName].packageDetails : 0}
+
     </text>
+
   </div>
 )}
 </div>
+{selectedPlan  && selectedPlan.serviceStatus && (
 <div className="third_order_card_div_main">
 <div className="status_n_incomplete_main">
   <div className="status_div_">Status</div>
-  <div className="InComplete_div_">{OrderStatus}</div>
+  <div className="InComplete_div_">{selectedPlan.serviceStatus}</div>
 </div>
 <div className="Delivery_n_time_divs">
   <div className="delivery_divv_">Dlivery</div>
   <div className="clock_icon_n_time">
     <img src={ClockIcon} alt="icon" className="clock_icon_css" />
     <time dateTime="" className="remaining_days_time">
-      {DeliveryTime}
+      {selectedPlan && selectedPlan.pricing && selectedPlan.pricing[selectedPlanName] ? selectedPlan.pricing[selectedPlanName].delivery    : 0} days
     </time>
   </div>
 </div>
@@ -208,6 +237,8 @@ const OrderCard = ({
   </div>
 )}
 </div>
+)}
+
 {groupChatState && (
 <div className="check-box-container">
   <img

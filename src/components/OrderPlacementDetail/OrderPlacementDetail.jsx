@@ -8,6 +8,7 @@ import StarIcon from "@material-ui/icons/Star";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
+import OrderCard from "../OrderDetailsMain/OrderCard";
 
 const OrderPlacementDetail = () => {
   const navRef = useRef();
@@ -17,10 +18,13 @@ const OrderPlacementDetail = () => {
     return storedPlan || {};
   });
 
+
   const [selectedPlanName, setSelectedPlanName] = useState(() => {
     const storedPlanName = JSON.parse(sessionStorage.getItem('planName'));
     return storedPlanName || '';
   });
+    console.log("selectedPlanselectedPlan........", selectedPlanName);
+
   const [deliveryDate, setDeliveryDate] = useState("");
 
   useEffect(() => {
@@ -50,6 +54,7 @@ const OrderPlacementDetail = () => {
 
 
   return (
+    <>
     <div>
       <Navbar ref={navRef} />
       <span
@@ -221,7 +226,9 @@ const OrderPlacementDetail = () => {
         </div>
       </span>
     </div>
+    </>
   );
 };
+
 
 export default OrderPlacementDetail;

@@ -99,9 +99,6 @@ const PaymnetComponent = (props) => {
 
     return (
         <>
-
-             {orderData && <OrderCard orderDatas={orderData} />}
-
             <Navbar ref={navRef} />
             <div className="pay"
                 onClick={() => {
