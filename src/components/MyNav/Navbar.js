@@ -14,11 +14,14 @@ import AyazImage from "../../images/Ayaz.png";
 import ToolTip from "../ToolTip/ToolTip";
 import ProfileToolTip from "../ProfileToolTip/ProfileToolTip";
 import avatar from "../../images/avatar.jpg";
+import axios from "axios";
 const Navbar = forwardRef((props, ref) => {
+  const { setResults } = props;
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
   const [click, setClick] = useState(false);
   const [showToolTip, setShowToolTip] = useState(false);
   const [showProfileToolTip, setShowProfileToolTip] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const handleClick = () => {
     setClick(!click);
     setShowToolTip(false);
@@ -33,6 +36,30 @@ const Navbar = forwardRef((props, ref) => {
   }));
   const closeMobileMenu = () => setClick(false);
 
+  const handleButtonClick = () => {
+    if (searchQuery.trim() !== "") {
+      // Call the API to perform the search
+      axios
+        .get(
+          `https://linkablebackend-production-e3d2.up.railway.app/guest/search-services/${searchQuery}`
+        )
+        .then((response) => {
+          // Handle the API response here
+          console.log("Search results:", response.data);
+          setResults(response.data);
+        })
+        .catch((error) => {
+
+          // Handle the API error here
+          console.error("Error searching services:", error);
+        });
+    }
+  };
+
+  const handleChange = (value) => {
+    setSearchQuery(value);
+  };
+
   return (
     <>
       <nav className="navbar">
@@ -41,19 +68,22 @@ const Navbar = forwardRef((props, ref) => {
             <img src={logo} alt="logo image" className="logo_navbar_css" />
           </div>
           <div className="Main_search_bar_buyer">
-            <div className="Search_icon_main">
-              <img src={search} alt="searchIcon" className="searchIcon_css" />
-            </div>
-            <div className="input_field_main">
-              <input
-                type="search"
-                placeholder="Search for any service..."
-                className="search_input_text_field"
-              />
-            </div>
-            <div className="search-btn">Get Started</div>
-          </div>
-
+      <div className="Search_icon_main">
+        <img src={search} alt="searchIcon" className="searchIcon_css" />
+      </div>
+      <div className="input_field_main">
+        <input
+          type="search"
+          placeholder="Search for any service..."
+          className="search_input_text_field"
+          value={searchQuery}
+          onChange={(e) => handleChange(e.target.value)}
+        />
+      </div>
+      <button className="search-btn" onClick={handleButtonClick}>
+        Get Started
+      </button>
+    </div>
           <div className="menu-icon" onClick={handleClick}>
             <i
               className={click ? "fas fa-times" : "fas fa-bars"}

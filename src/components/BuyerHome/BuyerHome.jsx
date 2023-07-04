@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BuyerNavbar from "../BuyerNavbar/BuyerNavbar";
 import Navbar from "../MyNav/Navbar";
 import GuestOptions from "../GuestOptions/GuestOptions";
@@ -18,7 +18,7 @@ import newRequest from "../../utils/newRequest";
 const BuyerHome = () => {
 
 
-
+  const [results, setResults] = useState([]);
 
   const SubmitCardData = [
     {
@@ -52,7 +52,7 @@ const BuyerHome = () => {
   return (
     <div>
       <div>
-        <Navbar />
+        <Navbar setResults={setResults} />
       </div>
       <div>
         <GuestOptions />
@@ -84,9 +84,11 @@ const BuyerHome = () => {
         />
       </div>
       <div>
+      {results && results.length > 0 &&
         <MultiItemCarousel
           gigsData={data}
-        />
+          results={results} />
+          }
         {/* <RecomendedServicesCard title={"Recommended for you, from USA"} /> */}
       </div>
       <div>

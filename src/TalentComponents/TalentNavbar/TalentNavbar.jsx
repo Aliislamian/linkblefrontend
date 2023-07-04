@@ -33,6 +33,12 @@ const TalentNavbar = forwardRef((props, ref) => {
     },
   }));
 
+  const handleButtonClick = () => {
+    const searchInput = document.querySelector('.search_input_text_field');
+    const searchQuery = searchInput.value;
+    console.log('Searching for:', searchQuery);
+  };
+
   const closeMobileMenu = () => setClick(false);
   const navigate = useNavigate();
   return (
@@ -60,7 +66,8 @@ const TalentNavbar = forwardRef((props, ref) => {
                 className="search_input_text_field"
               />
             </div>
-            <div className="search-btn">Get Started</div>
+            <button className="search-btn" onClick={handleButtonClick}>Get Started</button>
+
           </div>
 
           <div className="menu-icon" onClick={handleClick}>

@@ -11,14 +11,9 @@ import newRequest from "../../utils/newRequest";
 import axios from "axios"; // Import Axios library
 
 const OrderCard = ({
-  OrderImage,
   ProfileImage,
-  ProfilerName,
-  ProfilerCountry,
   OrderBudget,
   OrderDetails,
-  OrderStatus,
-  DeliveryTime,
   groupChatState,
   orderState,
   OrderCardNavigation,

@@ -4,6 +4,14 @@ import freelancer from "../../images/freelancer.png";
 import search from "../../images/search.png";
 
 const GuestHomeSearch = () => {
+
+  const handleButtonClick = () => {
+    const searchInput = document.querySelector('.search_input_text_field');
+    const searchQuery = searchInput.value;
+    console.log('Searching for:', searchQuery);
+  };
+
+
   return (
     <div className="intro_main_guestHome">
       <div className="intro_sub_main_guestHome_one">
@@ -15,25 +23,20 @@ const GuestHomeSearch = () => {
         <p className="guest_search_below_Search_tag">
           Hire professional Freelancer World Wide
         </p>
-        <div className="guest_home_search_container">
-          <div className="intro_search_icon">
-            <img
-              src={search}
-              alt="search icon"
-              className="intro_search_icon_image"
-            />
+        <div className="Main_search_bar_buyer">
+            <div className="Search_icon_main">
+              <img src={search} alt="searchIcon" className="searchIcon_css" />
+            </div>
+            <div className="input_field_main">
+              <input
+                type="search"
+                placeholder="Search for any service..."
+                className="search_input_text_field"
+              />
+            </div>
+            <button className="search-btn" onClick={handleButtonClick}>Get Started</button>
+
           </div>
-          {/* <div className="search_input"> */}
-          <input
-            type="search"
-            placeholder="Search for any service..."
-            className="into_search_input_text"
-          />
-          {/* </div> */}
-          <div className="intro_search_button">
-            <text>Get Started</text>
-          </div>
-        </div>
         <div className="intro_main_top_services">
           <div className="top_services">Top Services:</div>
 

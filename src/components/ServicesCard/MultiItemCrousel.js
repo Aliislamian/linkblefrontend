@@ -14,7 +14,8 @@ import five from "../../images/five.png";
 import CardServices from "./Card";
 // import "../ServicesCard/ServicesCard.css";
 let slidesToShow = 5;
-const PreviousBtn = (props) => {
+const PreviousBtn = (props, {results}) => {
+  console.log("----------",results );
   // console.log(props);
   const { className, onClick, currentSlide } = props;
 
@@ -148,6 +149,7 @@ const MultiItemCarousel = (props) => {
   }
 
   return (
+
     <div className="carousel" style={{ zIndex: "0" }}>
       <div className="carousel-text">
         <h1

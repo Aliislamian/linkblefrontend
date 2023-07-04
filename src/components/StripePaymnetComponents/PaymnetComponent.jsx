@@ -105,7 +105,6 @@ const PaymnetComponent = (props) => {
                     navRef.current.handleOutsideClick();
                 }}
             >
-
                 {clientSecret && (
                     <Elements options={options} stripe={stripePromise}>
                         <CheckoutForm />

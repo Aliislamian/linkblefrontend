@@ -13,6 +13,12 @@ const BuyerNavbar = () => {
   const [showToolTip, setShowToolTip] = useState(false);
   const navigate = useNavigate();
 
+  const handleButtonClick = () => {
+    const searchInput = document.querySelector('.search_input_text_field');
+    const searchQuery = searchInput.value;
+    console.log('Searching for:', searchQuery);
+  };
+
   return (
     <div className="main_nav_bar_div">
       <div className="sub_navbar_logo_main">
@@ -29,7 +35,7 @@ const BuyerNavbar = () => {
             className="search_input_text_field"
           />
         </div>
-        <div className="SearcchButton">Get Started</div>
+        <button className="search-btn" onClick={handleButtonClick}>Get Started</button>
       </div>
       <div className="BuyerSearchBar_Options_main">
         <div className="subMain_BuyerSearchBar_Options">
