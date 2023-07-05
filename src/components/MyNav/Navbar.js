@@ -14,6 +14,7 @@ import AyazImage from "../../images/Ayaz.png";
 import ToolTip from "../ToolTip/ToolTip";
 import ProfileToolTip from "../ProfileToolTip/ProfileToolTip";
 import avatar from "../../images/avatar.jpg";
+
 import axios from "axios";
 const Navbar = forwardRef((props, ref) => {
   const { setResults } = props;
