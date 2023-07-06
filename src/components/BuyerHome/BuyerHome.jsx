@@ -19,6 +19,7 @@ const BuyerHome = () => {
 
 
   const [results, setResults] = useState([]);
+  console.log("resultsresultsresults", results);
 
   const SubmitCardData = [
     {
@@ -79,16 +80,15 @@ const BuyerHome = () => {
       <div>
         <ServicesCardComponent
           gigsData={data}
+          results={results}
           title={"Continue browsing history"}
           subTitle={"Recently viewed Services"}
         />
       </div>
       <div>
-      {results && results.length > 0 &&
-        <MultiItemCarousel
-          gigsData={data}
-          results={results} />
-          }
+     
+  <MultiItemCarousel gigsData={data} results={results} />
+
         {/* <RecomendedServicesCard title={"Recommended for you, from USA"} /> */}
       </div>
       <div>

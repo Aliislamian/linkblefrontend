@@ -45,8 +45,8 @@ const Navbar = forwardRef((props, ref) => {
           `https://linkablebackend-production-e3d2.up.railway.app/guest/search-services/${searchQuery}`
         )
         .then((response) => {
-          // Handle the API response here
-          console.log("Search results:", response.data);
+          // Handle the API response here 
+          console.log("Search results-==========:", response.data);
           setResults(response.data);
         })
         .catch((error) => {

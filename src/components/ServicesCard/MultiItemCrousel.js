@@ -14,8 +14,7 @@ import five from "../../images/five.png";
 import CardServices from "./Card";
 // import "../ServicesCard/ServicesCard.css";
 let slidesToShow = 5;
-const PreviousBtn = (props, {results}) => {
-  console.log("----------",results );
+const PreviousBtn = (props) => {
   // console.log(props);
   const { className, onClick, currentSlide } = props;
 
@@ -101,86 +100,90 @@ const carouselProperties = {
   ],
 };
 
-const MultiItemCarousel = (props) => {
-  const [width, setWidth] = useState(window.innerWidth);
-  const updateWidth = () => {
-    setWidth(window.innerWidth);
-  };
-  const [servicesData, setServicesData] = useState([]);
-  useEffect(() => {
+  const MultiItemCarousel = (props) => {
+    // Accessing props directly from the props object
+   
 
-    if (props.gigsData) {
+    const [width, setWidth] = useState(window.innerWidth);
+    const updateWidth = () => {
+      setWidth(window.innerWidth);
+    };
+    const [servicesData, setServicesData] = useState([]);
+    useEffect(() => {
 
-      // let DisplayData = props.gigsData.services.map((service) => {
+      if (props.gigsData) {
 
-      //   // create a new array of objects with subject as service.title and image as service.servicesImages[0] 
-      //   // and push it to the array
+        // let DisplayData = props.gigsData.services.map((service) => {
 
-      //   let obj = {
-      //     subject: service.title,
-      //     image: service.servicesImages[0] ? service.servicesImages[0].imgUrl : "",
-      //     id: service._id
-      //   }
-      //   return obj;
-      // })
-      // if (DisplayData.length > 0) {
-      setServicesData(props.gigsData.services);
+        //   // create a new array of objects with subject as service.title and image as service.servicesImages[0] 
+        //   // and push it to the array
 
-      // }
+        //   let obj = {
+        //     subject: service.title,
+        //     image: service.servicesImages[0] ? service.servicesImages[0].imgUrl : "",
+        //     id: service._id
+        //   }
+        //   return obj;
+        // })
+        // if (DisplayData.length > 0) {
+        setServicesData(props.gigsData.services);
 
+        // }
+
+      }
+
+    }, [props.gigsData])
+
+
+    useEffect(() => {
+      window.addEventListener("resize", updateWidth);
+      return () => window.removeEventListener("resize", updateWidth);
+    }, []);
+
+    if (width <= 426) {
+      slidesToShow = 1;
+    } else if (width > 426 && width <= 769) {
+      slidesToShow = 3;
+    } else if (width > 769 && width <= 1025) {
+      slidesToShow = 4;
+    } else {
+      slidesToShow = 5;
     }
 
-  }, [props.gigsData])
+    return (
 
+      <div className="carousel" style={{ zIndex: "0" }}>
+        <div className="carousel-text">
+          <h1
+            className={
+              props.CarouselAllServices !== "null"
+                ? "first-text"
+                : "first-text carouselTitle"
+            }
+          >
+            {props.CarouselTitle}
+          </h1>
+          <h1 className="second-text">
+            {props.CarouselAllServices !== "null"
+              ? props.CarouselAllServices
+              : ""}
+          </h1>
+        </div>
+        
+        <Slider {...carouselProperties} style={{ zIndex: "0" }}>
 
-  useEffect(() => {
-    window.addEventListener("resize", updateWidth);
-    return () => window.removeEventListener("resize", updateWidth);
-  }, []);
+          {
 
-  if (width <= 426) {
-    slidesToShow = 1;
-  } else if (width > 426 && width <= 769) {
-    slidesToShow = 3;
-  } else if (width > 769 && width <= 1025) {
-    slidesToShow = 4;
-  } else {
-    slidesToShow = 5;
-  }
+            servicesData.length > 0 ? servicesData.map((item) => {
+              return <CardServices data={item} />;
+            }) : Services.map((item) => {
+              return <CardServices data={item} />;
+            })}
 
-  return (
-
-    <div className="carousel" style={{ zIndex: "0" }}>
-      <div className="carousel-text">
-        <h1
-          className={
-            props.CarouselAllServices !== "null"
-              ? "first-text"
-              : "first-text carouselTitle"
-          }
-        >
-          {props.CarouselTitle}
-        </h1>
-        <h1 className="second-text">
-          {props.CarouselAllServices !== "null"
-            ? props.CarouselAllServices
-            : ""}
-        </h1>
+        </Slider>
       </div>
-      <Slider {...carouselProperties} style={{ zIndex: "0" }}>
-
-        {
-
-          servicesData.length > 0 ? servicesData.map((item) => {
-            return <CardServices data={item} />;
-          }) : Services.map((item) => {
-            return <CardServices data={item} />;
-          })}
-
-      </Slider>
-    </div>
-  );
-};
+    );
+  };
 
 export default MultiItemCarousel;
 

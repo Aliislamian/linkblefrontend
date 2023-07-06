@@ -12,7 +12,8 @@ import thirteen from "../../images/thirteen.png";
 import fourteen from "../../images/fourteen.png";
 import fifteen from "../../images/fifteen.png";
 
-const ServicesCardComponent = ({ title, subTitle, gigsData }) => {
+const ServicesCardComponent = ({ title, subTitle, gigsData, results }) => {
+  console.log("jkdsahkadhkashdkjashdkajsh----", results);
   const [gigs, setGigs] = useState([]);
 
   useEffect(() => {

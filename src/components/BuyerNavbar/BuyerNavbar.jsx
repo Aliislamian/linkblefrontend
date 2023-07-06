@@ -14,9 +14,8 @@ const BuyerNavbar = () => {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
-    const searchInput = document.querySelector('.search_input_text_field');
-    const searchQuery = searchInput.value;
-    console.log('Searching for:', searchQuery);
+    
+    console.log('Searching for:');
   };
 
   return (
