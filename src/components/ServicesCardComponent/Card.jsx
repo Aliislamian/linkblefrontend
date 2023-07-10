@@ -19,6 +19,7 @@ import { useNavigate } from "react-router-dom";
 import one from "../../images/one.png";
 
 const CardServices = ({ data }) => {
+  console.log(data);
   const [show, setShow] = useState();
   const [favouriteIconState, setFavouriteIconState] = useState(false);
   const [imgSrc, setImgSrc] = useState("");
@@ -26,11 +27,11 @@ const CardServices = ({ data }) => {
   const callBack = () => { };
   const navigate = useNavigate();
   useEffect(() => {
-    let img = data.servicesImages && data.servicesImages[0] && data.servicesImages[0].imgUrl || one
+    let img = data.imgUrl || one;
     let price = data.pricing && data.pricing.basic && data.pricing.basic.price || 0;
     setImgSrc(img)
     setStartingPrice(price)
-  }, [data.servicesImages])
+  }, [data]);
   return (
     <div className="card"
       key={data._id}

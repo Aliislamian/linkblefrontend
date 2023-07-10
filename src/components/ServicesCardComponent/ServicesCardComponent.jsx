@@ -15,59 +15,12 @@ import fifteen from "../../images/fifteen.png";
 const ServicesCardComponent = ({ title, subTitle, gigsData, results }) => {
   console.log("jkdsahkadhkashdkjashdkajsh----", results);
   const [gigs, setGigs] = useState([]);
-
+  console.log(gigs);
   useEffect(() => {
-
     if (gigsData) {
-      setGigs(gigsData.services.slice(0, 10) || []);
+      setGigs(gigsData.services.slice(0, 12) || []);
     }
-
-
   }, [gigsData]);
-
-
-  const Services = [
-    {
-      subject: "expert mixing and mastering engineer",
-      image: six,
-    },
-    {
-      subject: "engaging article or blog post",
-      image: seven,
-    },
-    {
-      subject: "SEO and ranking your Sites/Channel",
-      image: eight,
-    },
-    {
-      subject: "create original business poster for digital marketing",
-      image: nine,
-    },
-    {
-      subject: "trumpet section to ensure your song is a hit",
-      image: ten,
-    },
-    {
-      subject: "Programming in python",
-      image: eleven,
-    },
-    {
-      subject: "Proofread and Editing website",
-      image: twelve,
-    },
-    {
-      subject: "Pro Logo Designing",
-      image: thirteen,
-    },
-    {
-      subject: "Microcontroller Programming ",
-      image: fourteen,
-    },
-    {
-      subject: "WordPress Bug Fixer and Developer",
-      image: fifteen,
-    },
-  ];
 
   return (
     <div className="main_suggested_card">
@@ -82,12 +35,14 @@ const ServicesCardComponent = ({ title, subTitle, gigsData, results }) => {
         <div className="Sub_title_heading">{subTitle}</div>
       </div>
       <div className="suggested_card_div">
-        {gigs.length > 0 ? gigs.map((item) => {
+        {gigs.length > 0 ?
+         gigs.map((item) => {
           return <CardServices data={item} />;
-        }) :
-          Services.map((item) => {
-            return <CardServices data={item} />;
-          })
+        }) 
+        :
+        results.map((item, index) => (
+          <CardServices data={item} searching={true} key={index} />
+        ))
         }
       </div>
     </div>

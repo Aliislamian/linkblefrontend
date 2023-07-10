@@ -87,7 +87,7 @@ const BuyerHome = () => {
       </div>
       <div>
      
-  <MultiItemCarousel gigsData={data} results={results} />
+  <MultiItemCarousel gigsData={data} />
 
         {/* <RecomendedServicesCard title={"Recommended for you, from USA"} /> */}
       </div>
