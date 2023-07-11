@@ -23,8 +23,9 @@ const OrderRequirement = () => {
   const [error, setError] = useState(null);
   const [selectedPlan, setSelectedPlan] = useState(() => {
     const storedPlan = JSON.parse(sessionStorage.getItem('selectedPlan'));
-    return storedPlan || {};
+    return storedPlan || {}; // Initialize with an empty object if it's null or undefined
   });
+  
   const [deliveryDate, setDeliveryDate] = useState("");
 
   const [selectedPlanName, setSelectedPlanName] = useState(() => {
