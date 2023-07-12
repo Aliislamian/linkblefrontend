@@ -36,7 +36,7 @@ const ToolTip = () => {
   const TooltipData = [
     {
       text: "My Profile",
-      navigation: "/talent-add-new-gig",
+      navigation: "/buyer-profile",
     },
     {
       text: "My Talent Dashboard",

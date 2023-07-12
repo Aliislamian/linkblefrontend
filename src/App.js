@@ -62,6 +62,8 @@ import ServiceDeliveryPage from "./pages/ServiceDeliveryPage/ServiceDeliveryPage
 import ReviewComponent from "./components/ReviewComponent/ReviewComponent";
 import BuyerReviewPage from "./pages/BuyerReviewPage/BuyerReviewPage";
 import SelectOfferPopUP from "./TalentComponents/SelectOfferPopUP/SelectOfferPopUP";
+import BuyerMyProfile from "./components/BuyerMyProfile/BuyerMyProfile";
+
 
 // import Footer from "./components/Footer/Footer";
 // import SuggestedServices from "./components/SuggestedServices/SuggestedServices";
@@ -203,7 +205,7 @@ function App() {
               path="/buyer-profile-list"
               element={<BuyerProfilesListPage />}
             />
-            <Route path="/buyer-profile" element={<BuyerProfilePage />} />
+            <Route path="/buyer-profile" element={<BuyerMyProfile />} />
             <Route
               path="/talent-order-delivery"
               element={<TalentServiceDeliveryPage />}
