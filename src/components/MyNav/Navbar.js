@@ -16,13 +16,18 @@ import ProfileToolTip from "../ProfileToolTip/ProfileToolTip";
 import avatar from "../../images/avatar.jpg";
 
 import axios from "axios";
+import ServicesCardComponent from "../ServicesCardComponent/ServicesCardComponent";
 const Navbar = forwardRef((props, ref) => {
-  const { setResults } = props;
+  const { gigsData, searchTerm, setSearchTerm } = props;
+  console.log("aaaaaaaaaa", gigsData);
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
   const [click, setClick] = useState(false);
   const [showToolTip, setShowToolTip] = useState(false);
   const [showProfileToolTip, setShowProfileToolTip] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+
+
+
   const handleClick = () => {
     setClick(!click);
     setShowToolTip(false);
@@ -37,32 +42,37 @@ const Navbar = forwardRef((props, ref) => {
   }));
   const closeMobileMenu = () => setClick(false);
 
-  const handleButtonClick = () => {
-    if (searchQuery.trim() !== "") {
-      // Call the API to perform the search
-      axios
-        .get(
-          `https://linkablebackend-production-e3d2.up.railway.app/guest/search-services/${searchQuery}`
-        )
-        .then((response) => {
-          // Handle the API response here 
-          console.log("Search results-==========:", response.data);
-          setResults(response.data);
-        })
-        .catch((error) => {
-
-          // Handle the API error here
-          console.error("Error searching services:", error);
-        });
-    }
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
   };
 
-  const handleChange = (value) => {
-    setSearchQuery(value);
-  };
+  // const filteredData = Array.from(gigsData).filter((item) => item.occu === "WEB");
+
+// console.log("==============>>>>Seracg",filteredData);
+
+  // const handleButtonClick = () => {
+  //   if (searchQuery.trim() !== "") {
+  //     // Call the API to perform the search
+  //     axios
+  //       .get(
+  //         `https://linkablebackend-production-e3d2.up.railway.app/guest/search-services/${searchQuery}`
+  //       )
+  //       .then((response) => {
+  //         // Handle the API response here 
+  //         console.log("Search results-==========:", response.data);
+  //         setResults(response.data);
+  //       })
+  //       .catch((error) => {
+
+  //         // Handle the API error here
+  //         console.error("Error searching services:", error);
+  //       });
+  //   }
+  // };
 
   return (
     <>
+      {/* <ServicesCardComponent filteredData={filteredData} /> */}
       <nav className="navbar">
         <div className="left">
           <div className="sub_navbar_logo_main">
@@ -77,11 +87,11 @@ const Navbar = forwardRef((props, ref) => {
           type="search"
           placeholder="Search for any service..."
           className="search_input_text_field"
-          value={searchQuery}
-          onChange={(e) => handleChange(e.target.value)}
+          value={searchTerm}
+          onChange={handleSearch}
         />
       </div>
-      <button className="search-btn" onClick={handleButtonClick}>
+      <button className="search-btn">
         Get Started
       </button>
     </div>

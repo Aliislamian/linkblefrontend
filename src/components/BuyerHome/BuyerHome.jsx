@@ -18,8 +18,7 @@ import newRequest from "../../utils/newRequest";
 const BuyerHome = () => {
 
 
-  const [results, setResults] = useState([]);
-  console.log("resultsresultsresults", results);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const SubmitCardData = [
     {
@@ -53,7 +52,10 @@ const BuyerHome = () => {
   return (
     <div>
       <div>
-        <Navbar setResults={setResults} />
+        <Navbar gigsData={data} 
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
+        />
       </div>
       <div>
         <GuestOptions />
@@ -80,7 +82,6 @@ const BuyerHome = () => {
       <div>
         <ServicesCardComponent
           gigsData={data}
-          results={results}
           title={"Continue browsing history"}
           subTitle={"Recently viewed Services"}
         />
